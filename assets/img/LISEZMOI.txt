@@ -1,0 +1,2 @@
+Dépose ici les photos du site (affiches, esquisses des architectes, chantier).
+Format conseillé : .jpg ou .webp, 1600 px de large maximum, moins de 400 Ko chacune.

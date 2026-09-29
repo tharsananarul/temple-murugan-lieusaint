@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact : Temple Murugan Lieusaint</title>
+<meta name="description" content="Contactez l'équipe du projet de lieu culturel et spirituel hindou à Lieusaint – Sénart.">
+<meta property="og:title" content="Contact : Temple Murugan Lieusaint">
+<meta property="og:description" content="Contactez l'équipe du projet de lieu culturel et spirituel hindou à Lieusaint – Sénart.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta name="theme-color" content="#8E2320">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%238E2320'/%3E%3Cpath d='M50 14 62 34H38ZM32 38h36l6 16H26ZM24 58h52l8 26H16Z' fill='%23FFCB55'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&family=Noto+Sans+Tamil:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#contenu" data-i18n="skip">Aller au contenu</a>
+<div class="note" data-i18n="banner">Site en préparation : le projet est actuellement en phase de conception.</div>
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="index.html"><b>Temple Murugan</b><span>Lieusaint · Sénart</span></a>
+    <nav class="main" id="menu" aria-label="Menu principal">
+      <a href="projet.html" data-i18n="nav_projet">Le projet</a> <a href="avancement.html" data-i18n="nav_avanc">Avancement</a> <a href="participer.html" data-i18n="nav_part">Participer</a> <a href="contact.html" aria-current="page" data-i18n="nav_contact">Contact</a> <a class="m-only" href="adhesion.html" data-i18n="btn_join">Adhérer</a> <a class="m-only" href="don.html" data-i18n="btn_donate">Faire un don</a>
+    </nav>
+    <div class="actions">
+      <div class="lang" role="group" aria-label="Langue / மொழி">
+        <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+        <button type="button" data-lang="ta" aria-pressed="false">தமிழ்</button>
+      </div>
+      <a class="btn btn-ghost" href="adhesion.html" data-i18n="btn_join">Adhérer</a>
+      <a class="btn btn-gold" href="don.html" data-i18n="btn_donate">Faire un don</a>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+<main id="contenu">
+<div class="page-head"><div class="wrap">
+  <h1 data-i18n="hd_ct_t">Nous contacter</h1>
+  <p data-i18n="hd_ct_d">Une question, une idée, une proposition d'aide ? Écrivez-nous.</p>
+</div></div>
+<section class="block">
+  <div class="wrap two">
+    <div class="side">
+      <h2 class="title">Coordonnées</h2>
+      <p><a class="js-mail" href="#">[adresse e-mail à ajouter dans js/config.js]</a></p>
+      <p><span class="todo">Adresse officielle de l'association</span> à ajouter si elle doit être publiée.</p>
+    </div>
+    <div>
+      <form class="grid" data-form="contact" novalidate>
+        <input type="hidden" name="_subject" value="Nouveau message depuis le site">
+        <div class="hp" aria-hidden="true"><label>Ne pas remplir <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+        <div class="field"><label class="l" for="c-nom"><span data-i18n="f_nom">Nom</span></label><input type="text" id="c-nom" name="nom" autocomplete="name" required><span class="err" id="e-c-nom"></span></div>
+        <div class="field"><label class="l" for="c-mail" data-i18n="f_mail">Adresse e-mail</label><input type="email" id="c-mail" name="email" autocomplete="email" required><span class="err" id="e-c-mail"></span></div>
+        <div class="field full"><label class="l" for="c-obj" data-i18n="f_subject">Objet</label>
+          <select id="c-obj" name="objet"><option data-i18n="sub1">Question générale</option><option data-i18n="sub2">Partenariat</option><option data-i18n="sub3">Média</option><option data-i18n="sub4">Bénévolat</option><option data-i18n="sub5">Autre</option></select></div>
+        <div class="field full"><label class="l" for="c-msg" data-i18n="f_msg">Message</label><textarea id="c-msg" name="message" required></textarea><span class="err" id="e-c-msg"></span></div>
+        <div class="field full">
+          <label class="check"><input type="checkbox" id="c-rgpd" name="consentement" required><span data-i18n="consent">J'accepte que l'association conserve ces informations pour me contacter au sujet du projet. Je peux demander leur suppression à tout moment.</span></label>
+          <span class="err" id="e-c-rgpd"></span>
+        </div>
+        <div class="field full"><button class="btn btn-red" type="submit" data-i18n="ct_btn">Envoyer le message</button></div>
+      </form>
+      <div class="ok" role="status"><span data-i18n="ct_ok">Merci ! Votre message a bien été envoyé.</span><p class="demo" hidden></p></div>
+      <div class="fail" role="alert">Ce formulaire n'est pas encore activé. Écrivez-nous directement par e-mail.</div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h2>Temple Murugan · Lieusaint</h2>
+        <p data-i18n="foot_about">Projet de création d'un lieu culturel et spirituel hindou à Lieusaint – Sénart.</p>
+        <p><a class="js-mail" href="contact.html">Nous écrire</a></p>
+      </div>
+      <div>
+        <h2 data-i18n="foot_nav">Le site</h2>
+        <ul>
+          <li><a href="projet.html" data-i18n="nav_projet">Le projet</a></li>
+          <li><a href="avancement.html" data-i18n="nav_avanc">Avancement</a></li>
+          <li><a href="participer.html" data-i18n="nav_part">Participer</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 data-i18n="foot_follow">Nous suivre</h2>
+        <ul>
+          <li data-social="instagram"><a data-social="instagram" href="#">Instagram</a></li>
+          <li data-social="facebook"><a data-social="facebook" href="#">Facebook</a></li>
+          <li data-social="youtube"><a data-social="youtube" href="#">YouTube</a></li>
+          <li data-social="tiktok"><a data-social="tiktok" href="#">TikTok</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copy">© Temple Murugan Lieusaint · <a href="mentions-legales.html" data-i18n="foot_legal">Mentions légales</a> · <a href="confidentialite.html" data-i18n="foot_priv">Confidentialité</a></p>
+  </div>
+</footer>
+<script src="js/config.js"></script>
+<script src="js/i18n-ta.js"></script>
+<script src="js/main.js"></script>
+<script src="js/forms.js"></script>
+</body>
+</html>
