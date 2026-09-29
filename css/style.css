@@ -68,7 +68,7 @@
   --focus:          oklch(58% 0.2 260);
 
   /* --- Typographie fluide (6 niveaux) --- */
-  --font:      "Montserrat", "Noto Sans Tamil", system-ui, sans-serif;
+  --font:      "Montserrat", system-ui, sans-serif;
   --fs-xs:     clamp(0.72rem,  0.69rem + 0.14vw, 0.80rem);
   --fs-sm:     clamp(0.875rem, 0.84rem + 0.16vw, 0.95rem);
   --fs-base:   clamp(1rem,     0.97rem + 0.14vw, 1.0625rem);
@@ -127,11 +127,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Tamil : interlignage élargi pour éviter les coupes de glyphes */
-html[lang="ta"] body { line-height: 1.9; }
-html[lang="ta"] h1,
-html[lang="ta"] h2,
-html[lang="ta"] h3 { line-height: 1.45; letter-spacing: 0; }
+/* Pas de variante de langue active — site uniquement en français */
 
 h1, h2, h3, h4 { text-wrap: balance; }
 img, svg { max-width: 100%; height: auto; display: block; }
@@ -295,31 +291,8 @@ nav.main a[aria-current="page"] {
 /* Actions header */
 .actions { display: flex; gap: var(--s-2); align-items: center; }
 
-/* Toggle langue */
-.lang {
-  display: flex;
-  border: 1.5px solid rgba(255,255,255,.45);
-  border-radius: var(--pill);
-  overflow: hidden;
-}
-.lang button {
-  background: transparent;
-  border: 0;
-  color: #fff;
-  font: inherit;
-  font-size: var(--fs-xs);
-  font-weight: 700;
-  padding: 6px 13px;
-  min-height: 38px;
-  min-width: 44px;
-  cursor: pointer;
-  transition: background 150ms;
-  letter-spacing: 0.04em;
-}
-.lang button[aria-pressed="true"] {
-  background: #fff;
-  color: var(--rouge-700);
-}
+
+
 
 /* Burger (mobile) — SVG animé via CSS */
 .burger {
@@ -485,11 +458,6 @@ nav.main a[aria-current="page"] {
   font-size: var(--fs-hero);
   line-height: 1.06;
   letter-spacing: -0.02em;
-}
-html[lang="ta"] .hero h1 {
-  line-height: 1.32;
-  font-size: clamp(2rem, 1.2rem + 3.5vw, 3.8rem);
-  letter-spacing: 0;
 }
 
 .hero .sub {
@@ -701,7 +669,6 @@ html[lang="ta"] .hero h1 {
   color: var(--heading);
   letter-spacing: -0.01em;
 }
-html[lang="ta"] .title { line-height: 1.38; letter-spacing: 0; }
 
 .eyebrow {
   display: inline-flex;
