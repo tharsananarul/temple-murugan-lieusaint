@@ -1,30 +1,108 @@
-# Site du projet : Temple Murugan Lieusaint
+# Temple Murugan Lieusaint
 
-Site statique (HTML, CSS, JavaScript) : pas d'installation, pas de framework. Tout se modifie dans VS Code.
+> Projet de création d'un lieu culturel et spirituel hindou à Lieusaint – Sénart.
+> Ouvert à tous. En phase de conception.
 
-## Ouvrir et tester
-1. Ouvre le dossier dans VS Code.
-2. Installe l'extension **Live Server** (Ritwick Dey), puis clic droit sur `index.html` > *Open with Live Server*.
+**🌐 Site en ligne :** [tharsananarul.github.io/temple-murugan-lieusaint](https://tharsananarul.github.io/temple-murugan-lieusaint/)
 
-## Structure
-- `index.html`, `projet.html`, `avancement.html`, `participer.html`, `adhesion.html`, `don.html`, `contact.html`
-- `mentions-legales.html`, `confidentialite.html` : modèles à compléter (repères jaunes)
-- `css/style.css` : tokens (couleurs, tailles) en haut du fichier, puis les composants
-- `js/config.js` : **le seul fichier à modifier pour brancher** e-mail, pétition, dons, adhésion, formulaires, réseaux sociaux
-- `js/i18n-ta.js` : traductions tamoules (clé = attribut `data-i18n` dans les pages)
-- `assets/img/` : photos
+---
 
-## À faire avant la mise en ligne
-1. Remplir `js/config.js`. Les liens vides sont masqués ou signalés.
-2. Formulaires : créer un compte Formspree (ou équivalent), coller l'adresse dans `formEndpoint`, puis passer `demoMode` à `false`.
-3. Dons / adhésion : coller les liens HelloAsso (ou Stripe Payment Links) dans `donation` et `adhesionPayUrl`.
-4. Chercher `class="todo"` dans les fichiers (Ctrl+Maj+F) : chaque repère jaune est un texte à compléter ou à valider. Les retirer une fois traités.
-5. Faire relire le tamoul et valider les pages légales par l'association.
-6. Remplacer les blocs `.ph` de `avancement.html` par de vraies photos, et ajouter une image de partage (`og:image`).
-7. Polices : Google Fonts est chargé depuis les serveurs de Google. Pour un site 100 % sans transfert vers Google, télécharge Montserrat et Noto Sans Tamil et charge-les depuis `assets/fonts/`.
+## Structure du projet
 
-## Mettre en ligne (gratuit)
-GitHub Pages : pousse le dossier dans un dépôt, puis *Settings > Pages > Deploy from a branch*. Un nom de domaine peut ensuite être branché.
+```
+projet-temple-lieusaint/
+├── index.html          # Accueil
+├── projet.html         # Le projet (vision, valeurs, architecture)
+├── avancement.html     # Frise d'avancement + galerie photos
+├── participer.html     # Adhérer / donner / signer / partager
+├── adhesion.html       # Formulaire d'adhésion
+├── don.html            # Page don
+├── contact.html        # Formulaire de contact
+├── mentions-legales.html
+├── confidentialite.html
+├── 404.html
+│
+├── css/
+│   └── style.css       # Feuille de style unique (tokens OKLCH en haut)
+│
+├── js/
+│   ├── config.js       # ⚙️ CONFIGURATION — modifier ici les liens et services
+│   ├── i18n-ta.js      # Traductions tamoules
+│   ├── main.js         # Menu, scroll, langue, bouton partager
+│   ├── forms.js        # Validation et envoi des formulaires
+│   └── don.js          # Logique page don
+│
+└── assets/
+    ├── gopuram.svg
+    └── img/            # Vos photos ici (voir LISEZMOI.txt)
+```
 
-## Ajouter une page
-Copie une page existante, change le `<title>`, la description et le contenu ; garde l'en-tête, le pied de page et les 3 scripts finaux.
+## Configuration rapide
+
+Ouvrez `js/config.js` et renseignez :
+
+```js
+window.SITE = {
+  contactEmail:   "votre@email.fr",
+  siteUrl:        "https://tharsananarul.github.io/temple-murugan-lieusaint/",
+  petitionUrl:    "https://lien-petition.fr",
+  formEndpoint:   "https://formspree.io/f/xxxxx",
+  demoMode:       false,           // passer à false avant mise en ligne
+  adhesionPayUrl: "https://...",
+  donation: { default: "", 10: "", 30: "", 50: "", 100: "" },
+  social: {
+    instagram: "",
+    facebook:  "",
+    youtube:   "",
+    tiktok:    ""
+  }
+};
+```
+
+## Ajouter des photos
+
+Placez vos images dans `assets/img/` puis remplacez les blocs `<div class="ph">` par :
+
+```html
+<img
+  src="assets/img/nom.jpg"
+  srcset="assets/img/nom-400.jpg 400w, assets/img/nom-800.jpg 800w"
+  sizes="(max-width: 640px) 100vw, 50vw"
+  alt="Description précise"
+  loading="lazy"
+  width="800" height="600"
+>
+```
+
+Pour l'image hero (prioritaire au chargement), utilisez `fetchpriority="high" loading="eager"`.
+
+## Déploiement GitHub Pages
+
+Le site est automatiquement déployé sur GitHub Pages depuis la branche `master`.
+
+```bash
+git add -A
+git commit -m "feat: ..."
+git push
+```
+
+## Stack technique
+
+- HTML5 sémantique, CSS vanilla (pas de framework)
+- Design : palette oklch, typographie fluide clamp(), dark mode, WCAG AA
+- JS vanilla (ES5 compatible) — aucune dépendance npm
+- Google Fonts : Montserrat + Noto Sans Tamil
+- Bilingue FR / Tamoul via `data-i18n`
+
+## Accessibilité
+
+- Contraste WCAG AA vérifié sur tous les textes
+- Focus visible partout
+- Navigation clavier complète
+- `prefers-reduced-motion` : zéro animation
+- Dark mode via `prefers-color-scheme`
+- Tamil : interlignage 1.9, pas de texte coupé
+
+---
+
+*Temple Murugan Lieusaint · Site en préparation*
