@@ -1,8 +1,8 @@
 /* ==========================================================================
    main.js — Temple Murugan Lieusaint
    Responsabilités :
-     1. Menu mobile (burger SVG animé, fermeture au clic lien / Escape)
-     2. Header scroll → glassmorphism
+     1. Menu mobile (burger SVG animé, backdrop, scroll-lock iOS/Android, Escape)
+     2. Header scroll → glassmorphism via IntersectionObserver
      3. Liens configurables depuis config.js (data-cfg, data-social, .js-mail)
      4. Bouton Partager (Web Share API ou copie presse-papiers)
      5. Aria-current page automatique
@@ -14,27 +14,44 @@
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.from((r || document).querySelectorAll(s)); };
 
-  /* ── 1. MENU MOBILE ─────────────────────────────────────── */
+  /* ── 1. MENU MOBILE & BACKDROP ──────────────────────────── */
   var burger = $("#burger");
   var menu   = $("#menu");
+
+  // Création du backdrop s'il n'existe pas
+  var backdrop = $(".nav-backdrop");
+  if (!backdrop) {
+    backdrop = document.createElement("div");
+    backdrop.className = "nav-backdrop";
+    backdrop.setAttribute("aria-hidden", "true");
+    document.body.appendChild(backdrop);
+  }
 
   if (burger && menu) {
     function openMenu() {
       menu.classList.add("open");
+      backdrop.classList.add("active");
       burger.setAttribute("aria-expanded", "true");
       burger.setAttribute("aria-label", "Fermer le menu");
-    }
-    function closeMenu() {
-      menu.classList.remove("open");
-      burger.setAttribute("aria-expanded", "false");
-      burger.setAttribute("aria-label", "Ouvrir le menu");
+      document.body.style.overflow = "hidden"; // Empêche le défilement de fond sur iPhone / Android
     }
 
-    burger.addEventListener("click", function () {
+    function closeMenu() {
+      menu.classList.remove("open");
+      backdrop.classList.remove("active");
+      burger.setAttribute("aria-expanded", "false");
+      burger.setAttribute("aria-label", "Ouvrir le menu");
+      document.body.style.overflow = "";
+    }
+
+    burger.addEventListener("click", function (e) {
+      e.stopPropagation();
       menu.classList.contains("open") ? closeMenu() : openMenu();
     });
 
-    /* Ferme au clic sur un lien */
+    backdrop.addEventListener("click", closeMenu);
+
+    /* Ferme au clic sur un lien du menu */
     menu.addEventListener("click", function (e) {
       if (e.target.tagName === "A") { closeMenu(); }
     });
@@ -47,12 +64,12 @@
       }
     });
 
-    /* Ferme en cliquant hors du menu */
-    document.addEventListener("click", function (e) {
-      if (!menu.contains(e.target) && !burger.contains(e.target)) {
+    /* Ferme si la fenêtre est redimensionnée en mode desktop */
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 860 && menu.classList.contains("open")) {
         closeMenu();
       }
-    });
+    }, { passive: true });
   }
 
   /* ── 2. HEADER GLASSMORPHISM AU SCROLL ─────────────────── */
@@ -60,14 +77,14 @@
   if (header) {
     if ("IntersectionObserver" in window) {
       var sentinel = document.createElement("div");
-      sentinel.style.cssText = "position:absolute;top:60px;height:1px;pointer-events:none;";
+      sentinel.style.cssText = "position:absolute;top:40px;height:1px;pointer-events:none;";
       document.body.insertBefore(sentinel, document.body.firstChild);
       new IntersectionObserver(function (entries) {
         header.classList.toggle("scrolled", !entries[0].isIntersecting);
       }).observe(sentinel);
     } else {
       window.addEventListener("scroll", function () {
-        header.classList.toggle("scrolled", window.scrollY > 60);
+        header.classList.toggle("scrolled", window.scrollY > 40);
       }, { passive: true });
     }
   }
@@ -84,8 +101,14 @@
   $$("[data-social]").forEach(function (el) {
     var v = cfg.social && cfg.social[el.dataset.social];
     if (el.tagName === "A") {
-      if (v) { el.setAttribute("href", v); el.target = "_blank"; el.rel = "noopener noreferrer"; }
-    } else if (!v) { el.hidden = true; }
+      if (v) {
+        el.setAttribute("href", v);
+        el.target = "_blank";
+        el.rel = "noopener noreferrer";
+      }
+    } else if (!v) {
+      el.hidden = true;
+    }
   });
 
   $$(".js-mail").forEach(function (el) {
@@ -95,17 +118,20 @@
     }
   });
 
-  /* ── 4. BOUTON PARTAGER ─────────────────────────────────── */
+  /* ── 4. BOUTON PARTAGER (Touch & Mobile friendly) ───────── */
   $$("[data-share]").forEach(function (btn) {
     btn.addEventListener("click", function (e) {
       e.preventDefault();
       var url  = cfg.siteUrl || location.href.split("#")[0];
       var data = {
         title: document.title,
-        text: "Projet de lieu culturel et spirituel à Lieusaint – Sénart",
+        text: "Projet de lieu culturel et spirituel hindou à Lieusaint – Sénart",
         url: url
       };
-      if (navigator.share) { navigator.share(data).catch(function () {}); return; }
+      if (navigator.share) {
+        navigator.share(data).catch(function () {});
+        return;
+      }
       if (navigator.clipboard) {
         navigator.clipboard.writeText(url).then(function () {
           var arrow  = btn.querySelector(".way-arrow");
