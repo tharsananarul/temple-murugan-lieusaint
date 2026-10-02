@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Participer — Temple Lieusaint</title>
+<title>Temple Lieusaint</title>
 <meta name="description" content="Découvrez toutes les façons de soutenir et de participer à la création du Temple Murugan à Lieusaint – Sénart : don, adhésion, pétition et bénévolat.">
 <meta property="og:title" content="Participer — Temple Lieusaint">
 <meta property="og:description" content="Découvrez toutes les façons de soutenir et de participer à la création du Temple Murugan à Lieusaint – Sénart : don, adhésion, pétition et bénévolat.">
@@ -11,20 +11,20 @@
 <meta property="og:locale" content="fr_FR">
 <meta name="theme-color" content="#240708">
 <!-- Favicon Logo Temple Lieusaint -->
-<link rel="icon" type="image/png" href="assets/img/logo-dore-murugan.png">
-<link rel="apple-touch-icon" href="assets/img/logo-dore-murugan.png">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="apple-touch-icon" href="assets/favicon.svg">
 <!-- Polices Google : Cinzel + Plus Jakarta Sans -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="page-participer">
 
 <a class="skip" href="#contenu">Aller au contenu principal</a>
 
 <!-- Bandeau d'annonce -->
-<div class="note" role="banner">
+<div class="note participation-note" role="banner">
   <span class="note-badge">Engagement Citoyen</span>
   <span>Chaque voix, chaque don et chaque compétence contribuent à l'édification du sanctuaire</span>
 </div>
@@ -39,7 +39,6 @@
       <div class="brand-text">
         <b>Temple Murugan</b>
         <span>Lieusaint · Sénart</span>
-        <small class="brand-tamil" aria-hidden="true">முருகன் திருத்தலம்</small>
       </div>
     </a>
     <nav class="main" id="menu" aria-label="Menu principal">
@@ -47,7 +46,7 @@
       <a href="avancement.html" data-i18n="nav_avanc">Avancement</a>
       <a href="participer.html" aria-current="page" data-i18n="nav_part">Participer</a>
       <a href="contact.html" data-i18n="nav_contact">Contact</a>
-      <a class="m-only" href="adhesion.html" data-i18n="btn_join">Adhérer</a>
+      <a class="header-join" href="adhesion.html" data-i18n="btn_join">Adhérer</a>
       <a class="m-only" href="don.html" data-i18n="btn_donate">Faire un don</a>
     </nav>
     <div class="actions">
@@ -87,7 +86,7 @@
           <div class="triptych-badge" aria-hidden="true">€</div>
           <h3>Faire un Don au Projet</h3>
           <p>Soutenez le financement des études architecturales, des sondages de sol et des formalités préparatoires du sanctuaire. Aucun don n'est trop modeste : chaque euro participe directement à la concrétisation du temple.</p>
-          <div style="background:var(--sable-50); border:1px solid var(--border); border-radius:var(--radius-sm); padding:12px; margin-block:16px; font-size:0.85rem; color:var(--text-2);">
+          <div style="background:var(--sable-50); border:1px solid var(--border); border-radius:var(--radius-sm); padding:12px; margin-block:16px; font-size:var(--fs-xs); color:var(--text-2);">
             <strong>Repères d'impact :</strong><br>
             • <strong>15 €</strong> : Matériel éducatif pour l'école tamoule<br>
             • <strong>50 €</strong> : Pierre sculptée du mandapam<br>
@@ -103,10 +102,10 @@
 
         <!-- 2. Adhérer à l'association -->
         <div class="triptych-card">
-          <div class="triptych-badge" aria-hidden="true">🏛️</div>
+          <div class="triptych-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 20h18M5 20v-8h14v8M3 12l9-7 9 7M8 15v5M12 15v5M16 15v5"/></svg></div>
           <h3>Adhérer à l'Association</h3>
           <p>Devenez membre adhérent officiel de l'association loi 1901. Vous prenez part aux assemblées générales annuelles, votez les orientations stratégiques et contribuez de l'intérieur à la vie de notre communauté de bâtisseurs.</p>
-          <div style="background:var(--sable-50); border:1px solid var(--border); border-radius:var(--radius-sm); padding:12px; margin-block:16px; font-size:0.85rem; color:var(--text-2);">
+          <div style="background:var(--sable-50); border:1px solid var(--border); border-radius:var(--radius-sm); padding:12px; margin-block:16px; font-size:var(--fs-xs); color:var(--text-2);">
             <strong>Vos privilèges membres :</strong><br>
             • Droit de vote en Assemblée Générale<br>
             • Accès prioritaire aux ateliers culturels et linguistiques<br>
@@ -121,10 +120,10 @@
 
         <!-- 3. Signer la pétition -->
         <div class="triptych-card" id="petition">
-          <div class="triptych-badge" aria-hidden="true">✍️</div>
+          <div class="triptych-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m4 16 10.8-10.8a2.1 2.1 0 0 1 3 3L7 19l-4 1z"/><path d="m13 7 4 4M14 19h7"/></svg></div>
           <h3>Signer la Pétition Citoyenne</h3>
           <p>Un geste citoyen gratuit, rapide et d'un poids décisif. En apposant votre signature, vous témoignez auprès de la municipalité de Lieusaint et de Grand Paris Sud que ce projet répond à une forte attente locale.</p>
-          <div style="background:var(--sable-50); border:1px solid var(--border); border-radius:var(--radius-sm); padding:12px; margin-block:16px; font-size:0.85rem; color:var(--text-2);">
+          <div style="background:var(--sable-50); border:1px solid var(--border); border-radius:var(--radius-sm); padding:12px; margin-block:16px; font-size:var(--fs-xs); color:var(--text-2);">
             <strong>Pourquoi signer ?</strong><br>
             • Démontre la demande réelle auprès des institutions<br>
             • Ne nécessite aucun paiement, engagement en 1 minute<br>
@@ -178,7 +177,7 @@
 
         <!-- Pôle 2 : Pédagogie & Langue -->
         <article class="bento-card bento-vert">
-          <div class="bento-icon" aria-hidden="true">📖</div>
+          <div class="bento-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 5.5v16M8 7h8M8 11h8"/></svg></div>
           <h3>Pôle Éducation & Transmission</h3>
           <p>Vous maîtrisez la langue tamoule, la calligraphie, l'histoire ou la philosophie védique ? Venez animer nos cours ou soutenir les ateliers éducatifs destinés aux jeunes générations de Sénart.</p>
           <div class="bento-tags">
@@ -190,7 +189,7 @@
 
         <!-- Pôle 3 : Architecture & Ingénierie -->
         <article class="bento-card bento-medit">
-          <div class="bento-icon" aria-hidden="true">📐</div>
+          <div class="bento-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m5 19 14-14M5 5h14v14"/><path d="M8 16h3M8 13h2M11 10h2M14 7h2"/></svg></div>
           <h3>Pôle Technique, BTP & Foncier</h3>
           <p>Architectes, urbanistes, ingénieurs structure, juristes ou acousticiens : apportez votre regard d'expert dans les commissions techniques préparatoires du sanctuaire.</p>
           <div class="bento-tags">
@@ -202,7 +201,7 @@
 
         <!-- Pôle 4 : Communication & Médias -->
         <article class="bento-card bento-solidaire">
-          <div class="bento-icon" aria-hidden="true">📢</div>
+          <div class="bento-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 10v4h4l8 4V6l-8 4zM8 14l1 5h3l-1-5"/><path d="M19 9a4 4 0 0 1 0 6"/></svg></div>
           <h3>Pôle Communication & Numérique</h3>
           <p>Photographes, vidéastes, rédacteurs, community managers et graphistes : aidez-nous à faire rayonner le projet auprès des médias, des institutions et sur les réseaux sociaux.</p>
           <div class="bento-tags">
@@ -234,7 +233,7 @@
       <div class="action-showcase">
         <!-- Carte Entreprises & Mécénat -->
         <div class="action-card" style="background: rgba(255,255,255,0.06); border: 1.5px solid rgba(255,203,85,0.35); color:#fff;">
-          <span class="action-badge-top" style="color:var(--or-300);">🤝 Entreprises & Fondations</span>
+          <span class="action-badge-top" style="color:var(--or-300);">Entreprises & Fondations</span>
           <h3 style="color:#fff;">Devenir Entreprise Mécène</h3>
           <p style="color:rgba(255,255,255,0.85);">Associez votre entreprise à un projet territorial valorisant la diversité, le vivre-ensemble et l'excellence patrimoniale à Sénart. Bénéficiez des dispositions du mécénat d'entreprise.</p>
           <div style="margin-top:auto;">
@@ -246,7 +245,7 @@
 
         <!-- Carte Partage & Réseaux Sociaux -->
         <div class="action-card" style="background: rgba(255,255,255,0.06); border: 1.5px solid rgba(255,203,85,0.35); color:#fff;">
-          <span class="action-badge-top" style="color:var(--or-300);">📢 Réseaux & Entourage</span>
+          <span class="action-badge-top" style="color:var(--or-300);">Réseaux & Entourage</span>
           <h3 style="color:#fff;">Relayer le Projet</h3>
           <p style="color:rgba(255,255,255,0.85);">Partagez le site à votre famille, vos amis, vos collègues et au sein de vos groupes WhatsApp. La force du bouche-à-oreille citoyen est notre premier moteur d'adhésion.</p>
           <div style="margin-top:auto;">
@@ -270,8 +269,8 @@
         <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
           <img src="assets/img/logo-dore-murugan.png" alt="" width="48" height="48" style="border-radius:50%; border:1px solid rgba(255,203,85,0.4);" aria-hidden="true">
           <div>
-            <h2 style="margin:0; font-size:1.15rem; color:#FFFFFF;">Temple Murugan</h2>
-            <span style="font-size:0.75rem; color:var(--or-400); letter-spacing:0.12em; text-transform:uppercase;">Lieusaint · Sénart</span>
+            <h2 style="margin:0; font-size:var(--fs-md); color:#FFFFFF;">Temple Murugan</h2>
+            <span style="font-size:var(--fs-2xs); color:var(--or-400); letter-spacing:0.12em; text-transform:uppercase;">Lieusaint · Sénart</span>
           </div>
         </div>
         <p>Projet associatif et citoyen pour la création d'un sanctuaire culturel et spirituel hindou à Lieusaint – Sénart. Un lieu de mémoire, de dialogue et d'enrichissement mutuel ouvert à tous.</p>
@@ -298,7 +297,7 @@
           <li data-social="youtube"><a data-social="youtube" href="#">YouTube</a></li>
           <li data-social="tiktok"><a data-social="tiktok" href="#">TikTok</a></li>
         </ul>
-        <p style="margin-top:var(--s-4); font-size:0.8rem; color:rgba(255,223,136,0.7);">
+        <p style="margin-top:var(--s-4); font-size:var(--fs-xs); color:rgba(255,223,136,0.7);">
           Association régie par la loi du 1er juillet 1901.<br>
           Enregistrée en préfecture de Seine-et-Marne.
         </p>

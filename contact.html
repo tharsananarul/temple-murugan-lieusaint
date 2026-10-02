@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contact — Temple Lieusaint</title>
+<title>Temple Lieusaint</title>
 <meta name="description" content="Contactez l'équipe du projet de lieu culturel et spirituel hindou à Lieusaint – Sénart.">
 <meta property="og:title" content="Contact — Temple Lieusaint">
 <meta property="og:description" content="Contactez l'équipe du projet de lieu culturel et spirituel hindou à Lieusaint – Sénart.">
@@ -11,8 +11,8 @@
 <meta property="og:locale" content="fr_FR">
 <meta name="theme-color" content="#240708">
 <!-- Favicon Logo Temple Lieusaint -->
-<link rel="icon" type="image/png" href="assets/img/logo-dore-murugan.png">
-<link rel="apple-touch-icon" href="assets/img/logo-dore-murugan.png">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="apple-touch-icon" href="assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
@@ -30,11 +30,10 @@
       <div class="brand-text">
         <b>Temple Murugan</b>
         <span>Lieusaint · Sénart</span>
-        <small class="brand-tamil" aria-hidden="true">முருகன் திருத்தலம்</small>
       </div>
     </a>
     <nav class="main" id="menu" aria-label="Menu principal">
-      <a href="projet.html" data-i18n="nav_projet">Le projet</a> <a href="avancement.html" data-i18n="nav_avanc">Avancement</a> <a href="participer.html" data-i18n="nav_part">Participer</a> <a href="contact.html" aria-current="page" data-i18n="nav_contact">Contact</a> <a class="m-only" href="adhesion.html" data-i18n="btn_join">Adhérer</a> <a class="m-only" href="don.html" data-i18n="btn_donate">Faire un don</a>
+      <a href="projet.html" data-i18n="nav_projet">Le projet</a> <a href="avancement.html" data-i18n="nav_avanc">Avancement</a> <a href="participer.html" data-i18n="nav_part">Participer</a> <a href="contact.html" aria-current="page" data-i18n="nav_contact">Contact</a> <a class="header-join" href="adhesion.html" data-i18n="btn_join">Adhérer</a> <a class="m-only" href="don.html" data-i18n="btn_donate">Faire un don</a>
     </nav>
     <div class="actions">
       <a class="btn btn-gold" href="don.html" data-i18n="btn_donate">Faire un don</a>
@@ -43,19 +42,44 @@
   </div>
 </header>
 <main id="contenu">
-<div class="page-head"><div class="wrap">
-  <h1 data-i18n="hd_ct_t">Nous contacter</h1>
-  <p data-i18n="hd_ct_d">Une question, une idée, une proposition d'aide ? Écrivez-nous.</p>
-</div></div>
-<section class="block">
-  <div class="wrap two">
-    <div class="side">
-      <h2 class="title">Coordonnées</h2>
-      <p><a class="js-mail" href="#">[adresse e-mail à ajouter dans js/config.js]</a></p>
-      <p><span class="todo">Adresse officielle de l'association</span> à ajouter si elle doit être publiée.</p>
-    </div>
+<section class="contact-hero">
+  <div class="wrap contact-hero-inner">
     <div>
-      <form class="grid" data-form="contact" novalidate>
+      <p class="contact-eyebrow">Temple Murugan · Lieusaint</p>
+      <h1 data-i18n="hd_ct_t">Nous contacter</h1>
+      <p class="contact-lead" data-i18n="hd_ct_d">Une question, une idée, une proposition d'aide ? Écrivez-nous.</p>
+    </div>
+    <div class="contact-hero-mark" aria-hidden="true">✦</div>
+  </div>
+</section>
+<section class="contact-section">
+  <div class="wrap contact-layout">
+    <aside class="contact-aside">
+      <div class="contact-aside-card">
+        <span class="contact-icon" aria-hidden="true">✉</span>
+        <p class="contact-eyebrow">Une question ?</p>
+        <h2>Parlons du projet</h2>
+        <p>Notre équipe vous répond avec plaisir et vous accompagne dans votre démarche.</p>
+        <a class="contact-mail js-mail" href="#">[adresse e-mail à ajouter dans js/config.js]</a>
+      </div>
+      <div class="contact-info-list">
+        <div class="contact-info-item">
+          <span aria-hidden="true">◌</span>
+          <div><strong>Un projet ouvert</strong><small>Culture, spiritualité et transmission</small></div>
+        </div>
+        <div class="contact-info-item">
+          <span aria-hidden="true">↗</span>
+          <div><strong>Vous souhaitez aider ?</strong><small>Partenariat, bénévolat ou mécénat</small></div>
+        </div>
+      </div>
+    </aside>
+    <div class="contact-form-card">
+      <div class="contact-form-heading">
+        <p class="contact-eyebrow">Votre message</p>
+        <h2>Écrivez-nous</h2>
+        <p>Les champs marqués sont nécessaires pour pouvoir vous répondre.</p>
+      </div>
+      <form class="grid contact-form" data-form="contact" novalidate>
         <input type="hidden" name="_subject" value="Nouveau message depuis le site">
         <div class="hp" aria-hidden="true"><label>Ne pas remplir <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
         <div class="field"><label class="l" for="c-nom"><span data-i18n="f_nom">Nom</span></label><input type="text" id="c-nom" name="nom" autocomplete="name" required><span class="err" id="e-c-nom"></span></div>

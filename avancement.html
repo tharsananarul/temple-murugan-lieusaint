@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Avancement — Temple Lieusaint</title>
+<title>Temple Lieusaint</title>
 <meta name="description" content="Suivez en temps réel et en toute transparence les étapes de conception, de concertation et d'édification du Temple Murugan Lieusaint – Sénart.">
 <meta property="og:title" content="Avancement — Temple Lieusaint">
 <meta property="og:description" content="Suivez en temps réel et en toute transparence les étapes de conception, de concertation et d'édification du Temple Murugan Lieusaint – Sénart.">
@@ -11,15 +11,15 @@
 <meta property="og:locale" content="fr_FR">
 <meta name="theme-color" content="#240708">
 <!-- Favicon Logo Temple Lieusaint -->
-<link rel="icon" type="image/png" href="assets/img/logo-dore-murugan.png">
-<link rel="apple-touch-icon" href="assets/img/logo-dore-murugan.png">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="apple-touch-icon" href="assets/favicon.svg">
 <!-- Polices Google : Cinzel + Plus Jakarta Sans -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="page-avancement">
 
 <a class="skip" href="#contenu">Aller au contenu principal</a>
 
@@ -39,7 +39,6 @@
       <div class="brand-text">
         <b>Temple Murugan</b>
         <span>Lieusaint · Sénart</span>
-        <small class="brand-tamil" aria-hidden="true">முருகன் திருத்தலம்</small>
       </div>
     </a>
     <nav class="main" id="menu" aria-label="Menu principal">
@@ -47,7 +46,7 @@
       <a href="avancement.html" aria-current="page" data-i18n="nav_avanc">Avancement</a>
       <a href="participer.html" data-i18n="nav_part">Participer</a>
       <a href="contact.html" data-i18n="nav_contact">Contact</a>
-      <a class="m-only" href="adhesion.html" data-i18n="btn_join">Adhérer</a>
+      <a class="header-join" href="adhesion.html" data-i18n="btn_join">Adhérer</a>
       <a class="m-only" href="don.html" data-i18n="btn_donate">Faire un don</a>
     </nav>
     <div class="actions">
@@ -87,12 +86,12 @@
         <div class="triptych-card highlight">
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
             <span class="roadmap-tag tag-active">En cours actif</span>
-            <strong style="color:var(--rouge-700); font-size:1.1rem; font-family:var(--font-heading);">✦ Objectif 1</strong>
+            <strong class="objective-label"><span aria-hidden="true">01</span> Objectif 1</strong>
           </div>
-          <h3 style="font-size:1.25rem;">Pétition Citoyenne</h3>
+          <h3 style="font-size:var(--fs-md);">Pétition Citoyenne</h3>
           <p>Mobilisation de l'ensemble des fidèles et des sympathisants pour affirmer l'importance culturelle et patrimoniale du temple auprès des décideurs.</p>
           <div style="margin-top:auto; padding-top:var(--s-4);">
-            <a class="btn btn-rouge btn-block" style="min-height:44px; font-size:0.88rem;" href="participer.html#petition">
+            <a class="btn btn-rouge btn-block" style="min-height:44px; font-size:var(--fs-sm);" href="participer.html#petition">
               <span>Signer la pétition en ligne</span>
             </a>
           </div>
@@ -102,12 +101,12 @@
         <div class="triptych-card">
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
             <span class="roadmap-tag tag-active">En concertation</span>
-            <strong style="color:var(--rouge-700); font-size:1.1rem; font-family:var(--font-heading);">✦ Objectif 2</strong>
+            <strong class="objective-label"><span aria-hidden="true">02</span> Objectif 2</strong>
           </div>
-          <h3 style="font-size:1.25rem;">Esquisses & Faisabilité</h3>
+          <h3 style="font-size:var(--fs-md);">Esquisses & Faisabilité</h3>
           <p>Travail approfondi avec notre cabinet d'architecture : volumétrie dravidienne, accessibilité PMR, gestion des flux et intégration paysagère douce.</p>
           <div style="margin-top:auto; padding-top:var(--s-4);">
-            <a class="btn btn-ghost btn-block" style="min-height:44px; font-size:0.88rem; color:var(--rouge-700); border-color:var(--rouge-700);" href="projet.html">
+            <a class="btn btn-ghost btn-block" style="min-height:44px; font-size:var(--fs-sm); color:var(--rouge-700); border-color:var(--rouge-700);" href="projet.html">
               <span>Voir la vision architecturale</span>
             </a>
           </div>
@@ -117,12 +116,12 @@
         <div class="triptych-card">
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
             <span class="roadmap-tag tag-done">En consolidation</span>
-            <strong style="color:var(--rouge-700); font-size:1.1rem; font-family:var(--font-heading);">✦ Objectif 3</strong>
+            <strong class="objective-label"><span aria-hidden="true">03</span> Objectif 3</strong>
           </div>
-          <h3 style="font-size:1.25rem;">Fonds d'Études Préparatoires</h3>
+          <h3 style="font-size:var(--fs-md);">Fonds d'Études Préparatoires</h3>
           <p>Campagne de dons réguliers et d'adhésions pour financer les honoraires techniques, études de sol et l'instruction du permis de construire.</p>
           <div style="margin-top:auto; padding-top:var(--s-4);">
-            <a class="btn btn-gold btn-shine btn-block" style="min-height:44px; font-size:0.88rem;" href="don.html">
+            <a class="btn btn-gold btn-shine btn-block" style="min-height:44px; font-size:var(--fs-sm);" href="don.html">
               <span>Contribuer au fonds</span>
             </a>
           </div>
@@ -181,7 +180,7 @@
                 Recueil des signatures de soutien citoyen. Ce plébiscite démontre aux partenaires territoriaux de Sénart et de Grand Paris Sud que le projet répond à une forte attente culturelle et spirituelle.
               </p>
               <div style="margin-top:10px;">
-                <a class="btn btn-gold btn-shine" style="min-height:40px; padding:0 18px; font-size:0.85rem;" href="participer.html#petition">
+                <a class="btn btn-gold btn-shine" style="min-height:40px; padding:0 18px; font-size:var(--fs-xs);" href="participer.html#petition">
                   <span>Signer la pétition dès maintenant</span>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                 </a>
@@ -300,8 +299,8 @@
         <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
           <img src="assets/img/logo-dore-murugan.png" alt="" width="48" height="48" style="border-radius:50%; border:1px solid rgba(255,203,85,0.4);" aria-hidden="true">
           <div>
-            <h2 style="margin:0; font-size:1.15rem; color:#FFFFFF;">Temple Murugan</h2>
-            <span style="font-size:0.75rem; color:var(--or-400); letter-spacing:0.12em; text-transform:uppercase;">Lieusaint · Sénart</span>
+            <h2 style="margin:0; font-size:var(--fs-md); color:#FFFFFF;">Temple Murugan</h2>
+            <span style="font-size:var(--fs-2xs); color:var(--or-400); letter-spacing:0.12em; text-transform:uppercase;">Lieusaint · Sénart</span>
           </div>
         </div>
         <p>Projet associatif et citoyen pour la création d'un sanctuaire culturel et spirituel hindou à Lieusaint – Sénart. Un lieu de mémoire, de dialogue et d'enrichissement mutuel ouvert à tous.</p>
@@ -328,7 +327,7 @@
           <li data-social="youtube"><a data-social="youtube" href="#">YouTube</a></li>
           <li data-social="tiktok"><a data-social="tiktok" href="#">TikTok</a></li>
         </ul>
-        <p style="margin-top:var(--s-4); font-size:0.8rem; color:rgba(255,223,136,0.7);">
+        <p style="margin-top:var(--s-4); font-size:var(--fs-xs); color:rgba(255,223,136,0.7);">
           Association régie par la loi du 1er juillet 1901.<br>
           Enregistrée en préfecture de Seine-et-Marne.
         </p>

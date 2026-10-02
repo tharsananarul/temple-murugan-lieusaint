@@ -4,20 +4,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Temple Lieusaint</title>
-<meta name="description" content="Projet de création d'un sanctuaire culturel et spirituel hindou à Lieusaint – Sénart. Découvrez la vision, suivez l'avancement et participez au projet.">
-<meta property="og:title" content="Temple Lieusaint">
-<meta property="og:description" content="Projet de création d'un sanctuaire culturel et spirituel hindou à Lieusaint – Sénart. Découvrez la vision, suivez l'avancement et participez au projet.">
+<meta name="description" content="Projet citoyen et culturel de construction d'un sanctuaire hindou dravidien d'exception à Lieusaint – Grand Paris Sud. Découvrez la vision, le programme et soutenez l'édifice.">
+<meta property="og:title" content="Temple Murugan Lieusaint — Sanctuaire Culturel & Spirituel de Sénart">
+<meta property="og:description" content="Projet citoyen et culturel de construction d'un sanctuaire hindou dravidien d'exception à Lieusaint – Grand Paris Sud. Découvrez la vision, le programme et soutenez l'édifice.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
-<meta name="theme-color" content="#240708">
+<meta name="theme-color" content="#140304">
+
 <!-- Favicon Logo Temple Lieusaint -->
-<link rel="icon" type="image/png" href="assets/img/logo-dore-murugan.png">
-<link rel="apple-touch-icon" href="assets/img/logo-dore-murugan.png">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="apple-touch-icon" href="assets/favicon.svg">
+
 <!-- Polices Google : Cinzel (royauté & tradition) + Plus Jakarta Sans (clarté contemporaine) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+
 <!-- Données structurées Schema.org pour le référencement naturel -->
 <script type="application/ld+json">
 {
@@ -47,50 +50,111 @@
      BANDEAU D'ANNONCE INSTITUTIONNELLE
      ============================================================ -->
 <div class="note" role="banner">
-  <span class="note-badge">Projet Citoyen</span>
-  <span>Phase de concertation architecturale & citoyenne à Lieusaint – Sénart</span>
+  <span class="note-badge">Concertation</span>
+  <span>Projet citoyen & architectural à Lieusaint – Sénart (Grand Paris Sud)</span>
 </div>
 
 <!-- ============================================================
-     EN-TÊTE DU SITE & LOGO PRESTIGE
+     EN-TÊTE DU SITE & NAVBAR MODERNE
      ============================================================ -->
 <header class="site" id="header">
   <div class="wrap bar">
-    <!-- Logo agrandi et mis en valeur avec halo doré -->
+    <!-- Identité principale : Logo royal + nom net, sans surcharge -->
     <a class="brand" href="index.html" aria-label="Temple Murugan Lieusaint — Retour à l'accueil">
-      <div class="brand-logo-frame">
-        <img class="brand-logo" src="assets/img/logo-dore-murugan.png" alt="Emblème royal du Temple Murugan Lieusaint" width="66" height="66" loading="eager" fetchpriority="high">
+      <div class="brand-emblem-wrap">
+        <img class="brand-logo" src="assets/img/logo-dore-murugan.png" alt="Emblème royal du Temple Murugan Lieusaint" width="54" height="54" loading="eager" fetchpriority="high">
       </div>
-      <div class="brand-text">
-        <b>Temple Murugan</b>
-        <span>Lieusaint · Sénart</span>
-        <small class="brand-tamil" aria-hidden="true">முருகன் திருத்தலம்</small>
+      <div class="brand-identity">
+        <span class="brand-main">Temple Murugan</span>
+        <span class="brand-sub">Lieusaint · Sénart</span>
       </div>
     </a>
 
-    <!-- Menu de navigation principal -->
-    <nav class="main" id="menu" aria-label="Menu principal">
-      <a href="projet.html" data-i18n="nav_projet">Le projet</a>
-      <a href="avancement.html" data-i18n="nav_avanc">Avancement</a>
-      <a href="participer.html" data-i18n="nav_part">Participer</a>
-      <a href="contact.html" data-i18n="nav_contact">Contact</a>
-      <!-- Liens mobiles dédiés -->
-      <a class="m-only" href="adhesion.html" data-i18n="btn_join">Adhérer à l'association</a>
-      <a class="m-only" href="don.html" data-i18n="btn_donate">Faire un don</a>
+    <!-- Navigation principale Desktop : claire et aérée -->
+    <nav class="main-desktop" aria-label="Menu principal">
+      <a class="nav-link" href="projet.html" data-i18n="nav_projet">Le projet</a>
+      <a class="nav-link" href="avancement.html" data-i18n="nav_avanc">Avancement</a>
+      <a class="nav-link" href="participer.html" data-i18n="nav_part">Participer</a>
+      <a class="nav-link" href="contact.html" data-i18n="nav_contact">Contact</a>
+      <a class="nav-link header-join" href="adhesion.html" data-i18n="btn_join">Adhérer</a>
     </nav>
 
-    <!-- Bouton d'action principal -->
-    <div class="actions">
-      <a class="btn btn-gold btn-shine" href="don.html" data-i18n="btn_donate">Faire un don</a>
-      <!-- Bouton Burger mobile tactile -->
-      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu de navigation">
-        <span class="burger-line" aria-hidden="true"></span>
-        <span class="burger-line" aria-hidden="true"></span>
-        <span class="burger-line" aria-hidden="true"></span>
+    <!-- Actions Header : CTA bureau & Contrôles tactiles mobile -->
+    <div class="header-actions">
+      <!-- Bouton d'action rapide mobile -->
+      <a class="mobile-quick-cta" href="don.html" data-i18n="btn_donate">Soutenir</a>
+
+      <!-- Bouton d'action principal Desktop -->
+      <a class="btn btn-gold btn-shine header-cta" href="don.html" data-i18n="btn_donate">
+        <span>Soutenir le projet</span>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+
+      <!-- Déclencheur tactile mobile (Burger haute précision) -->
+      <button class="burger-btn" id="burger" type="button" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Ouvrir le menu de navigation">
+        <span class="burger-bar" aria-hidden="true"></span>
+        <span class="burger-bar" aria-hidden="true"></span>
+        <span class="burger-bar" aria-hidden="true"></span>
       </button>
     </div>
   </div>
 </header>
+
+<!-- ============================================================
+     VRAI VOLET MOBILE (DRAWER NAVIGATION HAUTE DÉFINITION)
+     ============================================================ -->
+<div class="mobile-drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
+<aside class="mobile-drawer" id="mobile-drawer" aria-label="Navigation mobile" aria-hidden="true">
+  <div class="drawer-header">
+    <div class="drawer-brand">
+      <img src="assets/img/logo-dore-murugan.png" alt="" width="44" height="44" aria-hidden="true">
+      <div class="drawer-title-group">
+        <span class="drawer-title">Temple Murugan</span>
+      </div>
+    </div>
+    <button class="drawer-close-btn" type="button" aria-label="Fermer la navigation mobile">✕</button>
+  </div>
+
+  <ul class="drawer-nav-list">
+    <li>
+      <a class="drawer-nav-link" href="projet.html">
+        <span>Le projet</span>
+        <span class="drawer-nav-number">01</span>
+      </a>
+    </li>
+    <li>
+      <a class="drawer-nav-link" href="avancement.html">
+        <span>Avancement</span>
+        <span class="drawer-nav-number">02</span>
+      </a>
+    </li>
+    <li>
+      <a class="drawer-nav-link" href="participer.html">
+        <span>Participer</span>
+        <span class="drawer-nav-number">03</span>
+      </a>
+    </li>
+    <li>
+      <a class="drawer-nav-link" href="contact.html">
+        <span>Contact</span>
+        <span class="drawer-nav-number">04</span>
+      </a>
+    </li>
+  </ul>
+
+  <div class="drawer-actions">
+    <a class="btn btn-gold btn-shine btn-block" href="don.html">
+      <span>Faire un don au projet</span>
+    </a>
+    <a class="btn btn-glass btn-block" href="adhesion.html">
+      <span>Adhérer à l'association</span>
+    </a>
+  </div>
+
+  <div class="drawer-footer-info">
+    <span>Association Loi 1901 · Lieusaint – Sénart</span>
+  </div>
+</aside>
 
 <!-- ============================================================
      CONTENU PRINCIPAL
@@ -99,7 +163,7 @@
 
   <!-- ── 1. HERO IMMERSIF CINÉMATIQUE (COUCHER DE SOLEIL, VEL, GOPURAM & PAON) ── -->
   <section class="hero-immersive" aria-label="Présentation générale du projet Temple Murugan Lieusaint">
-    <!-- Double source responsive : portrait mobile dédié / panorama horizontal desktop -->
+    <!-- Double source responsive optimisée -->
     <picture class="hero-picture">
       <source media="(max-width: 860px)" srcset="assets/img/hero-temple-mobile.webp" type="image/webp">
       <source media="(max-width: 860px)" srcset="assets/img/hero-temple-mobile.png" type="image/png">
@@ -110,56 +174,77 @@
         class="hero-bg-img"
         fetchpriority="high"
         loading="eager"
-        width="2048"
-        height="768"
       >
     </picture>
 
-    <!-- Voile lumineux subtil protégeant le texte tout en sublimant le coucher de soleil -->
+    <!-- Halo d'or sacré pulsant derrière le Gopuram -->
+    <div class="hero-ambient-glow" aria-hidden="true"></div>
+
+    <!-- Scrim cinématique multi-stop préservant l'éclat du temple et garantissant la lisibilité -->
     <div class="hero-scrim" aria-hidden="true"></div>
 
     <div class="wrap hero-wrap">
       <div class="hero-content">
-        <!-- Badge institutionnel & spirituel avec symbole sacré du Vel -->
+        <!-- Badge institutionnel & territorial avec micro-pulse -->
         <div class="hero-badge">
-          <svg viewBox="0 0 16 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M8 2 C4.5 7 2.5 12 8 16 C13.5 12 11.5 7 8 2 Z" fill="#FFCB55"/>
-            <line x1="8" y1="16" x2="8" y2="30" stroke="#FFCB55" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-          <span>Sanctuaire Culturel & Spirituel · Lieusaint – Sénart</span>
+          <span class="badge-dot-pulse" aria-hidden="true"></span>
+          <span>Grand Paris Sud · Lieusaint</span>
+          <span class="badge-sep" aria-hidden="true">✦</span>
+          <span>Sanctuaire Dravidien</span>
         </div>
 
+        <!-- Titre royal sans coupures artificielles sur mobile -->
         <h1 class="hero-title">
-          Un lieu pour se rassembler,<br>
-          <span class="gold-gradient">transmettre</span><br>
-          & partager
+          Un sanctuaire d'exception pour <span class="gold-gradient">rassembler</span>, transmettre & rayonner
         </h1>
 
         <p class="hero-desc">
-          À Lieusaint, au cœur du territoire de Grand Paris Sud, nous concevons un sanctuaire architectural dravidien d'exception. Un espace ouvert à tous, dédié à la concorde, au rayonnement de la culture tamoule et à la paix intérieure.
+          À Lieusaint, nous élevons un haut lieu de culture dravidienne et de paix intérieure. Un espace d'amitié, de célébration et de transmission ouvert à tous les habitants de Sénart et d'Île-de-France.
         </p>
 
-        <!-- Action principale directe et épurée -->
+        <!-- Actions prioritaires -->
         <div class="hero-actions">
           <a class="btn btn-gold btn-shine" href="don.html">
             <span>Soutenir le projet</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
+          <a class="btn btn-glass" href="projet.html">
+            <span>Découvrir la vision</span>
+          </a>
         </div>
 
-        <!-- Repères institutionnels discrets et professionnels -->
-        <div class="hero-trust-bar" aria-label="Informations institutionnelles">
-          <span class="trust-item">✦ Association Loi 1901 d'intérêt culturel</span>
-          <span class="trust-sep" aria-hidden="true">·</span>
-          <span class="trust-item">Territoire de Grand Paris Sud</span>
-          <span class="trust-sep" aria-hidden="true">·</span>
-          <span class="trust-item">Concertation citoyenne & architecturale</span>
+        <!-- Cartes de prestige flottantes : profondeur et réassurance sans débordement -->
+        <div class="hero-trust-cards" aria-label="Piliers majeurs du projet">
+          <div class="hero-trust-card">
+            <div class="trust-card-title">
+              <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 20h18M5 20v-8h14v8M3 12l9-7 9 7M8 15v5M12 15v5M16 15v5"/></svg>
+              <span>Édifice Dravidien</span>
+            </div>
+            <p class="trust-card-desc">Fidélité au Vastu Shastra et élégance des sculptures séculaires.</p>
+          </div>
+
+          <div class="hero-trust-card">
+            <div class="trust-card-title">
+              <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m8 12 2.2 2.2a2 2 0 0 0 2.8 0l1-1M5 10l3-3 3 3-3 3zM19 10l-3-3-3 3 3 3z"/></svg>
+              <span>Ouvert à Tous</span>
+            </div>
+            <p class="trust-card-desc">Concorde républicaine, dialogue culturel et accueil chaleureux.</p>
+          </div>
+
+          <div class="hero-trust-card">
+            <div class="trust-card-title">
+              <span aria-hidden="true">✦</span>
+              <span>Élan Citoyen</span>
+            </div>
+            <p class="trust-card-desc">100% financé par des dons privés, mécénat et souscriptions.</p>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- ── 2. SECTION FONDATIONS (CADRE CHAUD & CONTRASTÉ) ── -->
+  <!-- ── 2. SECTION FONDATIONS : CADRE CHAUD & RYTHME VISUEL ── -->
   <section class="block section-foundations" aria-labelledby="fondations-h">
     <div class="wrap">
       <div class="section-head">
@@ -168,33 +253,33 @@
         <p class="lead">Le Temple Murugan de Lieusaint s'appuie sur trois fondations majeures qui guident chaque choix architectural et associatif.</p>
       </div>
 
-      <!-- Triptyque asymétrique avec contraste chaleureux et animations -->
+      <!-- Triptyque asymétrique sculpté avec micro-animations -->
       <div class="triptych-grid">
         <!-- Pilier 1 : Rayonnement et patrimoine architectural -->
-        <div class="triptych-card highlight">
-          <div class="triptych-badge" aria-hidden="true">1</div>
+        <article class="triptych-card highlight">
+          <div class="triptych-badge" aria-hidden="true">01</div>
           <h3>Patrimoine & Beauté Dravidienne</h3>
           <p>Un ensemble architectural fidèle aux règles séculaires du Vastu Shastra et de l'art dravidien. Édifié en concertation avec des architectes qualifiés, il enrichira le paysage urbain sénartais d'un patrimoine d'une élégance rare.</p>
-        </div>
+        </article>
 
         <!-- Pilier 2 : Fraternité et ouverture à la cité -->
-        <div class="triptych-card">
-          <div class="triptych-badge" aria-hidden="true">2</div>
+        <article class="triptych-card">
+          <div class="triptych-badge" aria-hidden="true">02</div>
           <h3>Ouverture & Vivre-Ensemble</h3>
           <p>Un espace laïquement respectueux des valeurs républicaines et chaleureusement ouvert à tous les habitants de Lieusaint et d'Île-de-France. Ici, la curiosité et l'amitié entre communautés sont au cœur de l'accueil.</p>
-        </div>
+        </article>
 
         <!-- Pilier 3 : Transmission aux nouvelles générations -->
-        <div class="triptych-card">
-          <div class="triptych-badge" aria-hidden="true">3</div>
+        <article class="triptych-card">
+          <div class="triptych-badge" aria-hidden="true">03</div>
           <h3>Transmission & Éducation</h3>
           <p>Offrir aux jeunes générations les clés d'un héritage millénaire : cours de langue tamoule, ateliers d'histoire, pratique de la danse Bharatanatyam et de la musique carnatique pour construire des ponts d'avenir.</p>
-        </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- Séparateur ornemental Vel doré -->
+  <!-- Séparateur ornemental Vel doré sacré -->
   <div class="vel-divider" aria-hidden="true">
     <span class="vel-divider-line"></span>
     <span class="vel-icon">
@@ -206,7 +291,7 @@
     <span class="vel-divider-line"></span>
   </div>
 
-  <!-- ── 3. SECTION SABLE / PIERRE : SHOWCASE ÉDITORIAL & DÉMARCHE ── -->
+  <!-- ── 3. SECTION DÉMARCHE & ESPACES : SHOWCASE ÉDITORIAL LUXE ── -->
   <section class="block section-ivory" aria-labelledby="demarche-h">
     <div class="wrap two">
       <!-- Colonne Visuel avec Citation intégrée -->
@@ -221,11 +306,10 @@
       </div>
 
       <!-- Colonne Contenu & Espaces prévus -->
-      <div class="stack">
+      <div>
         <p class="eyebrow">Notre Démarche</p>
         <h2 class="title" id="demarche-h">Un projet pensé pour aujourd'hui et pour les siècles à venir</h2>
         <p class="lead">À Lieusaint, au cœur de la ville nouvelle de Sénart, nous posons avec méthode les fondations d'un équipement durable, harmonieux et solidaire.</p>
-        <p class="muted">Le temple est conçu comme un carrefour polyvalent unissant la sérénité du culte hindou traditionnel et l'effervescence d'un centre culturel de haut niveau accueillant conférences, expositions et festivités conviviales.</p>
 
         <!-- Liste architecturale des espaces -->
         <div class="spaces-list" aria-label="Espaces prévus dans le projet">
@@ -252,21 +336,21 @@
           </div>
         </div>
 
-        <div style="padding-top: var(--s-2);">
+        <div style="padding-top: var(--s-3);">
           <a class="btn btn-rouge" href="projet.html">Découvrir le programme détaillé</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── 4. SECTION SOMBRE (BORDEAUX SACRÉ & OR ÉTOILÉ) : ROADMAP & JALONS ── -->
+  <!-- ── 4. SECTION SOMBRE (BORDEAUX SACRÉ & OR) : ROADMAP & JALONS ── -->
   <section class="block section-dark" aria-labelledby="roadmap-h">
     <div class="wrap roadmap-container">
       <!-- Colonne gauche : Contexte & Appel à mobilisation -->
       <div>
         <p class="eyebrow">Où en sommes-nous</p>
         <h2 class="title" id="roadmap-h">Le temple se bâtit pas à pas, avec chacun de vous</h2>
-        <p class="lead" style="color: rgba(255, 255, 255, 0.85); margin-block-end: var(--s-5);">
+        <p class="lead" style="color: rgba(255, 255, 255, 0.88); margin-block-end: var(--s-5);">
           Chaque étape franchie avec transparence et concertation renforce la crédibilité du projet auprès de la municipalité, de Grand Paris Sud et de nos partenaires techniques.
         </p>
         <div style="display:flex; flex-direction:column; gap: var(--s-3); align-items:flex-start;">
@@ -374,19 +458,20 @@
 
         <!-- Bento 2 : Transmission & École Tamoule (span 5) -->
         <article class="bento-card bento-vert" aria-labelledby="bento-ecole-h">
-          <div class="bento-icon" aria-hidden="true">📖</div>
+          <img class="bento-ornament ornament-vel" src="assets/vel-red.svg" alt="" aria-hidden="true">
+          <div class="bento-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 5.5v16M8 7h8M8 11h8"/></svg></div>
           <h3 id="bento-ecole-h">Transmission & École Tamoule</h3>
           <p>Enseignement de la langue tamoule classique et contemporaine, ateliers d'histoire, découverte de la poésie humaniste du Tirukkural et accompagnement des jeunes générations vers l'épanouissement personnel et citoyen.</p>
           <div class="bento-tags">
-            <span class="bento-tag">Langue Tamoule</span>
-            <span class="bento-tag">Philosophie Tirukkural</span>
+            <span class="bento-tag">Tirukkural</span>
             <span class="bento-tag">Soutien Éducatif</span>
           </div>
         </article>
 
         <!-- Bento 3 : Méditation & Spiritualité Intérieure (span 5) -->
         <article class="bento-card bento-medit" aria-labelledby="bento-spirit-h">
-          <div class="bento-icon" aria-hidden="true">🪔</div>
+          <img class="bento-ornament ornament-peacock" src="assets/peacock-red.svg" alt="" aria-hidden="true">
+          <div class="bento-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 14h10l-1.2 5H8.2z"/><path d="M5 14h14M9 10.5c0-2 1.5-3 3-5 1.5 2 3 3 3 5a3 3 0 0 1-6 0Z"/><path d="M12 2v2"/></svg></div>
           <h3 id="bento-spirit-h">Spiritualité & Paix Intérieure</h3>
           <p>Célébrations liturgiques védiques solennelles, méditation silencieuse quotidienne et espaces d'apaisement intérieur pour retrouver l'harmonie face au tumulte du quotidien.</p>
           <div class="bento-tags">
@@ -398,7 +483,8 @@
 
         <!-- Bento 4 : Vivre-ensemble & Solidarité Active (span 7) -->
         <article class="bento-card bento-solidaire" aria-labelledby="bento-solidarite-h">
-          <div class="bento-icon" aria-hidden="true">🍲</div>
+          <img class="bento-ornament ornament-vel ornament-vel-wide" src="assets/vel-red.svg" alt="" aria-hidden="true">
+          <div class="bento-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 11h16v2a6 6 0 0 1-6 6h-4a6 6 0 0 1-6-6z"/><path d="M3 11h18M8 7c0-1.2.8-2 2-2M12 7c0-1.2.8-2 2-2M16 7c0-1.2.8-2 2-2"/></svg></div>
           <h3 id="bento-solidarite-h">Solidarité Locale & Annadhanam</h3>
           <p>Fidèle au principe fondamental de l'Annadhanam (repas fraternel offert sans distinction), le lieu mènera des actions d'entraide concrète, de repas partagés et de dialogues interculturels avec les associations sénartaises.</p>
           <div class="bento-tags">
@@ -411,7 +497,7 @@
     </div>
   </section>
 
-  <!-- ── 6. SECTION SABLE (IVOIRE CHAUD) : PARTICIPATION À MULTIPLES NIVEAUX ── -->
+  <!-- ── 6. SECTION SABLE (IVOIRE CHAUD) : PARTICIPATION & DONS INTERACTIFS ── -->
   <section class="block section-ivory" aria-labelledby="participer-h">
     <div class="wrap">
       <div class="section-head">
@@ -427,25 +513,44 @@
           <span class="action-badge-top">✦ Mécénat & Soutien Financier</span>
           <h3>Faire un don au projet</h3>
           <p>Participez directement au financement des études architecturales de pointe, des études de sol et des formalités juridiques préparatoires. Chaque don rapproche le projet de sa première pierre.</p>
-          <div class="don-presets" aria-label="Montants de dons suggérés">
-            <span class="don-preset">10 €</span>
-            <span class="don-preset">30 €</span>
-            <span class="don-preset">50 €</span>
-            <span class="don-preset">100 €</span>
-            <span class="don-preset">Libre</span>
+
+          <!-- Puces de montants interactives avec micro-interactions -->
+          <div class="don-presets" role="group" aria-label="Choisir un montant de don">
+            <button class="don-preset" type="button">10 €</button>
+            <button class="don-preset active" type="button">30 €</button>
+            <button class="don-preset" type="button">50 €</button>
+            <button class="don-preset" type="button">100 €</button>
+            <button class="don-preset" type="button">Libre</button>
           </div>
-          <a class="btn btn-gold btn-shine btn-block" href="don.html">
-            <span>Faire un don en ligne sécurisé</span>
+
+          <a class="btn btn-gold btn-shine btn-block" href="don.html?montant=30">
+            <span>Faire un don de 30 € en ligne</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
         </div>
 
         <!-- Carte Adhésion Citoyenne -->
         <div class="action-card adhesion-card">
-          <span class="action-badge-top">🏛️ Engagement Associatif</span>
+          <span class="action-badge-top">Engagement Associatif</span>
           <h3>Adhérer à l'association</h3>
           <p>Devenez membre officiel de l'association loi 1901. Participez aux assemblées générales annuelles, donnez votre voix aux grandes décisions stratégiques et intégrez la communauté active des bâtisseurs.</p>
-          <div style="margin-top:auto; padding-top:var(--s-4);">
+
+          <ul class="adhesion-perks" aria-label="Avantages membres">
+            <li class="adhesion-perk">
+              <span class="perk-icon" aria-hidden="true">✓</span>
+              <span>Droit de vote aux assemblées générales ordinaires</span>
+            </li>
+            <li class="adhesion-perk">
+              <span class="perk-icon" aria-hidden="true">✓</span>
+              <span>Accès prioritaire aux ateliers culturels et conférences</span>
+            </li>
+            <li class="adhesion-perk">
+              <span class="perk-icon" aria-hidden="true">✓</span>
+              <span>Bulletin d'information trimestriel exclusif des bâtisseurs</span>
+            </li>
+          </ul>
+
+          <div style="margin-top:auto;">
             <a class="btn btn-rouge btn-block" href="adhesion.html">
               <span>Rejoindre l'association en 2 minutes</span>
             </a>
@@ -466,7 +571,7 @@
 
         <!-- 2. Partenariats -->
         <a class="ribbon-item" href="contact.html">
-          <div class="ribbon-icon" aria-hidden="true">🤝</div>
+          <div class="ribbon-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m8 12 2.2 2.2a2 2 0 0 0 2.8 0l1-1"/><path d="m5 10 3-3 3 3-3 3zM19 10l-3-3-3 3 3 3z"/><path d="m8 7 2-2a3 3 0 0 1 4 0l2 2M5 10l-2 2 3 3 2-2M19 10l2 2-3 3-2-2"/></svg></div>
           <div class="ribbon-text">
             <strong>Devenir partenaire</strong>
             <span>Mécénat d'entreprise & institutions</span>
@@ -475,7 +580,7 @@
 
         <!-- 3. Relayer -->
         <a class="ribbon-item" href="#" data-share>
-          <div class="ribbon-icon" aria-hidden="true">📢</div>
+          <div class="ribbon-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 10v4h4l8 4V6l-8 4zM8 14l1 5h3l-1-5"/><path d="M19 9a4 4 0 0 1 0 6"/></svg></div>
           <div class="ribbon-text">
             <strong>Relayer le projet</strong>
             <span>Partager à vos proches & réseaux</span>
@@ -497,7 +602,7 @@
       <div class="faq" role="region" aria-label="Questions fréquentes">
         <details>
           <summary>Le temple sera-t-il ouvert aux personnes qui ne sont pas de confession hindoue ?</summary>
-          <p>Absolument. Le projet Temple Murugan Lieusaint est pensé comme un ensemble culturel et spirituel ouvert à tous sans distinction. Les cours de danse, de musique, de langue, les conférences et les fêtes traditionnelles accueillent l'ensemble des résidents de Lieusaint, de Sénart et d'Île-de-France avec bienveillance et fraternité.</p>
+          <p>Absolument. Le projet Temple Murugan Lieusaint est pensé comme un ensemble culturel et spirituel ouvert à tous sans distinction. Les cours de danse, de musique, de langue, les conférences et les fêtes traditionnelles accueilleront l'ensemble des résidents de Lieusaint, de Sénart et d'Île-de-France avec bienveillance et fraternité.</p>
         </details>
 
         <details>
@@ -507,7 +612,7 @@
 
         <details>
           <summary>Comment le projet est-il financé ?</summary>
-          <p>Le projet est financé à 100% par des fonds privés issus de dons de fidèles, de cotisations d'adhérents et de mécénat associatif et d'entreprises. Conformément aux principes de la loi de 1905, aucun fonds public n'est sollicité pour la partie cultuelle.</p>
+          <p>Le projet est financé à 100% par des fonds privés issus de dons de fidèles, de cotisations d'adhérents et de mécénat associatif et d'entreprises. Conformément aux principes républicains de la loi de 1905, aucun fonds public n'est sollicité pour la partie cultuelle.</p>
         </details>
 
         <details>
@@ -521,20 +626,45 @@
 </main>
 
 <!-- ============================================================
+     LOCALISATION DU PROJET
+     ============================================================ -->
+<section class="location-section section-ivory" aria-labelledby="location-title">
+  <div class="wrap location-grid">
+    <div class="location-copy">
+      <p class="eyebrow">Nous trouver</p>
+      <h2 class="title" id="location-title">Le Temple à Savigny-le-Temple</h2>
+      <p class="lead">Retrouvez le projet au <strong>2 All. des Échoppes, Savigny-le-Temple</strong>.</p>
+      <a class="btn btn-rouge" href="https://www.openstreetmap.org/search?query=2%20All.%20des%20%C3%89choppes%20Savigny-le-Temple" target="_blank" rel="noopener noreferrer">
+        Ouvrir l'itinéraire
+      </a>
+    </div>
+    <div class="location-map">
+      <iframe
+        title="Carte du Temple Lieusaint au 2 Allée des Échoppes, Savigny-le-Temple"
+        src="https://www.google.com/maps?q=2%20All.%20des%20%C3%89choppes%2C%20Savigny-le-Temple&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
      PIED DE PAGE DU SITE (DUSK SACRÉ & OR)
      ============================================================ -->
 <footer class="site" role="contentinfo">
   <div class="wrap">
-    <div class="footer-kudu" aria-hidden="true"></div>
+    <div class="kudu footer-kudu" aria-hidden="true"></div>
 
     <div class="cols">
       <!-- Colonne 1 : Présentation & Vocation -->
       <div>
         <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
-          <img src="assets/img/logo-dore-murugan.png" alt="" width="48" height="48" style="border-radius:50%; border:1px solid rgba(255,203,85,0.4);" aria-hidden="true">
+          <img src="assets/img/logo-dore-murugan.png" alt="" width="48" height="48" style="border-radius:50%; border:1.5px solid rgba(255,203,85,0.4);" aria-hidden="true">
           <div>
-            <h2 style="margin:0; font-size:1.15rem; color:#FFFFFF;">Temple Murugan</h2>
-            <span style="font-size:0.75rem; color:var(--or-400); letter-spacing:0.12em; text-transform:uppercase;">Lieusaint · Sénart</span>
+            <h2 style="margin:0; font-size:var(--fs-md); color:#FFFFFF;">Temple Murugan</h2>
+            <span style="font-size:var(--fs-2xs); color:var(--or-400); letter-spacing:0.12em; text-transform:uppercase; font-weight:700;">Lieusaint · Sénart</span>
           </div>
         </div>
         <p>Projet associatif et citoyen pour la création d'un sanctuaire culturel et spirituel hindou à Lieusaint – Sénart. Un lieu de mémoire, de dialogue et d'enrichissement mutuel ouvert à tous.</p>
@@ -563,7 +693,7 @@
           <li data-social="youtube"><a data-social="youtube" href="#">YouTube</a></li>
           <li data-social="tiktok"><a data-social="tiktok" href="#">TikTok</a></li>
         </ul>
-        <p style="margin-top:var(--s-4); font-size:0.8rem; color:rgba(255,223,136,0.7);">
+        <p style="margin-top:var(--s-4); font-size:var(--fs-xs); color:rgba(255,223,136,0.7);">
           Association régie par la loi du 1er juillet 1901.<br>
           Enregistrée en préfecture de Seine-et-Marne.
         </p>

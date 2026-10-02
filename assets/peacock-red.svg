@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 260" role="img" aria-labelledby="title desc">
+  <title id="title">Paon stylisé</title>
+  <desc id="desc">Illustration décorative d'un paon inspiré de l'iconographie de Murugan.</desc>
+  <g fill="none" stroke="#731A1D" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke-width="4" opacity=".22" d="M110 244C94 201 92 157 109 116"/>
+    <path stroke-width="4" opacity=".3" d="M106 143C71 123 45 96 34 60M112 134c29-31 53-64 60-104M101 153c-42-7-76-1-96 18M118 151c42-12 74-8 96 9"/>
+    <path stroke-width="5" d="M110 238c-4-34-3-69 2-101 4-28 18-45 34-47 19-2 30 20 20 37-7 12-21 16-34 11"/>
+    <path fill="#731A1D" stroke-width="3" d="M112 143c-6-18 1-37 17-46 10-6 23-3 28 7 4 8 1 17-6 22-8 6-18 3-21-5"/>
+    <path fill="#C48F12" stroke-width="3" d="M151 98l19-7-12 16z"/>
+    <circle cx="135" cy="103" r="3.5" fill="#FFCB55" stroke="none"/>
+    <g stroke="#C48F12" stroke-width="3">
+      <path d="M35 60c-3-19 13-34 30-28 14 5 19 21 10 33"/>
+      <path d="M172 30c15-12 35-3 37 14 2 15-10 27-25 25"/>
+      <path d="M5 171c-11-16 0-35 18-36 16-1 27 13 22 28"/>
+      <path d="M214 160c15-8 31 2 31 18 0 15-14 24-27 18"/>
+    </g>
+  </g>
+</svg>

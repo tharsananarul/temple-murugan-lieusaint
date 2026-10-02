@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 260" role="img" aria-labelledby="title desc">
+  <title id="title">Vel sacré stylisé</title>
+  <desc id="desc">Illustration décorative du vel de Murugan.</desc>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="#731A1D" stroke-width="5" d="M50 248V80"/>
+    <path fill="#731A1D" stroke="#731A1D" stroke-width="4" d="M50 10C29 34 16 60 24 83c6 18 20 28 26 38 6-10 20-20 26-38C84 60 71 34 50 10Z"/>
+    <path stroke="#C48F12" stroke-width="3" d="M50 27v70M37 48c8 13 13 26 13 39M63 48c-8 13-13 26-13 39"/>
+    <path stroke="#C48F12" stroke-width="2" d="M50 112v119"/>
+    <path stroke="#731A1D" stroke-width="3" d="M39 248h22"/>
+  </g>
+</svg>
