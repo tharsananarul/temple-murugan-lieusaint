@@ -6,6 +6,7 @@
      3. Liens configurables depuis config.js (data-cfg, data-social, .js-mail)
      4. Bouton Partager (Web Share API ou copie presse-papiers)
      5. Aria-current page automatique
+     6. Scroll Reveal animations (IntersectionObserver)
    ========================================================================== */
 (function () {
   "use strict";
@@ -152,5 +153,53 @@
       a.setAttribute("aria-current", "page");
     }
   });
+
+  /* ── 6. SCROLL REVEAL ANIMATIONS ──────────────────────── */
+  // Respect prefers-reduced-motion
+  var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (!prefersReducedMotion && "IntersectionObserver" in window) {
+    // Add .reveal class to eligible elements
+    var revealSelectors = [
+      ".pillar",
+      ".act-card",
+      ".way-card",
+      ".block .title",
+      ".block .eyebrow",
+      ".block .lead",
+      ".timeline-item",
+      ".img-slot",
+      ".vel-divider",
+      ".faq details"
+    ];
+
+    var revealElements = $$(revealSelectors.join(", "));
+
+    revealElements.forEach(function (el) {
+      el.classList.add("reveal");
+    });
+
+    // Create observer
+    var revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: "0px 0px -60px 0px"
+    });
+
+    revealElements.forEach(function (el) {
+      revealObserver.observe(el);
+    });
+
+    // Add stagger class to parent grids
+    $$(".acts-grid, .ways-grid, .pillars").forEach(function (grid) {
+      grid.classList.add("reveal-stagger");
+    });
+  }
 
 })();

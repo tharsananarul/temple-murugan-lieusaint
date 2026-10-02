@@ -13,7 +13,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%237a1e1b'/%3E%3Cpath d='M50 14 62 34H38ZM32 38h36l6 16H26ZM24 58h52l8 26H16Z' fill='%23FFCB55'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -24,8 +24,11 @@
 <header class="site" id="header">
   <div class="wrap bar">
     <a class="brand" href="index.html" aria-label="Temple Murugan Lieusaint — accueil">
-      <b>Temple Murugan</b>
-      <span>Lieusaint · Sénart</span>
+      <img class="brand-logo" src="assets/img/logo-murugan.png" alt="" width="42" height="42" loading="eager" aria-hidden="true">
+      <div class="brand-text">
+        <b>Temple Murugan</b>
+        <span>Lieusaint · Sénart</span>
+      </div>
     </a>
     <nav class="main" id="menu" aria-label="Menu principal">
       <a href="projet.html" data-i18n="nav_projet">Le projet</a>
@@ -159,49 +162,14 @@
         </p>
       </div>
 
-      <!-- Colonne galerie -->
+      <!-- Colonne visuel -->
       <div>
         <p class="eyebrow" data-i18n="gal_h">Le projet en images</p>
         <h2 class="title" style="margin-block-end: var(--s-5);" data-i18n="gal_h">Le projet en images</h2>
 
-        <!--
-          INSTRUCTIONS PHOTO :
-          Remplace chaque bloc .ph par :
-          <figure style="margin:0">
-            <img
-              src="assets/img/nom.jpg"
-              srcset="assets/img/nom-400.jpg 400w, assets/img/nom-800.jpg 800w"
-              sizes="(max-width: 640px) 100vw, 50vw"
-              alt="Description précise de la photo"
-              loading="lazy"
-              width="800" height="600"
-              style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:12px;"
-            >
-          </figure>
-        -->
-        <div class="gallery">
-          <figure style="margin:0" class="img-slot">
-            <img src="assets/img/temple-sunset.jpg" alt="Inspiration : temple de Murugan au coucher de soleil" loading="lazy" width="800" height="600" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:12px;">
-          </figure>
-          <figure style="margin:0" class="img-slot">
-            <img src="assets/img/architecture-dravidienne.webp" alt="Référence d'architecture dravidienne : Gopuram monumental" loading="lazy" width="800" height="600" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:12px;">
-          </figure>
-          <figure style="margin:0" class="img-slot">
-            <img src="assets/img/murugan-paon.jpg" alt="Symbolisme tamoul : Mayil, monture et emblème sacré de Murugan" loading="lazy" width="800" height="600" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:12px;">
-          </figure>
-          <figure style="margin:0" class="img-slot">
-            <img src="assets/img/temple-vector.avif" alt="Étude vectorielle des structures de temple traditionnel" loading="lazy" width="800" height="600" style="width:100%; aspect-ratio:4/3; object-fit:contain; background: var(--surface-raised); border-radius:12px;">
-          </figure>
-          <div class="ph">
-            <span aria-hidden="true">👥</span>
-            Photo équipe / réunion<br>
-            <code>assets/img/equipe.jpg</code>
-          </div>
-          <div class="ph">
-            <span aria-hidden="true">🏙️</span>
-            Terrain / Lieusaint<br>
-            <code>assets/img/terrain.jpg</code>
-          </div>
+        <div class="empty" role="status">
+          <p>Les photographies du projet seront publiées au fur et à mesure de l'avancement des travaux de conception et de construction.</p>
+          <a class="btn btn-rouge" href="participer.html">Suivre le projet</a>
         </div>
       </div>
     </div>

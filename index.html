@@ -12,45 +12,47 @@
 <meta name="theme-color" content="#7a1e1b">
 <!-- Favicon gopuram géométrique -->
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%237a1e1b'/%3E%3Cpath d='M50 14 62 34H38ZM32 38h36l6 16H26ZM24 58h52l8 26H16Z' fill='%23FFCB55'/%3E%3C/svg%3E">
-<!-- Polices Google — Montserrat -->
+<!-- Polices Google — Cinzel (titres majestueux) + Plus Jakarta Sans (corps & UI) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <!-- Lien d'évitement (accessibilité) -->
-<a class="skip" href="#contenu" data-i18n="skip">Aller au contenu</a>
+<a class="skip" href="#contenu">Aller au contenu</a>
 
 <!-- Bandeau annonce -->
-<div class="note" role="banner" data-i18n="banner">Site en préparation : le projet est actuellement en phase de conception.</div>
+<div class="note" role="banner">Site en préparation : le projet est actuellement en phase de conception avec les architectes.</div>
 
 <!-- ============================================================
-     EN-TÊTE
+     EN-TÊTE DU SITE
      ============================================================ -->
 <header class="site" id="header">
   <div class="wrap bar">
     <a class="brand" href="index.html" aria-label="Temple Murugan Lieusaint — accueil">
-      <b>Temple Murugan</b>
-      <span>Lieusaint · Sénart</span>
+      <img class="brand-logo" src="assets/img/logo-murugan.png" alt="" width="42" height="42" loading="eager" aria-hidden="true">
+      <div class="brand-text">
+        <b>Temple Murugan</b>
+        <span>Lieusaint · Sénart</span>
+      </div>
     </a>
 
     <nav class="main" id="menu" aria-label="Menu principal">
-      <a href="projet.html" data-i18n="nav_projet">Le projet</a>
-      <a href="avancement.html" data-i18n="nav_avanc">Avancement</a>
-      <a href="participer.html" data-i18n="nav_part">Participer</a>
-      <a href="contact.html" data-i18n="nav_contact">Contact</a>
-      <!-- Mobile uniquement -->
-      <a class="m-only" href="adhesion.html" data-i18n="btn_join">Adhérer</a>
-      <a class="m-only" href="don.html" data-i18n="btn_donate">Faire un don</a>
+      <a href="projet.html">Le projet</a>
+      <a href="avancement.html">Avancement</a>
+      <a href="participer.html">Participer</a>
+      <a href="contact.html">Contact</a>
+      <!-- Liens mobiles supplémentaires -->
+      <a class="m-only" href="adhesion.html">Adhérer à l'association</a>
+      <a class="m-only" href="don.html">Faire un don</a>
     </nav>
 
     <div class="actions">
-      <!-- Toggle langue FR / Tamil -->
-      <a class="btn btn-ghost" href="adhesion.html" data-i18n="btn_join">Adhérer</a>
-      <a class="btn btn-or" href="don.html" data-i18n="btn_donate">Faire un don</a>
-      <!-- Burger mobile (SVG animé) -->
+      <a class="btn btn-ghost" href="adhesion.html">Adhérer</a>
+      <a class="btn btn-or" href="don.html">Faire un don</a>
+      <!-- Burger mobile tactile -->
       <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">
         <span class="burger-line" aria-hidden="true"></span>
         <span class="burger-line" aria-hidden="true"></span>
@@ -65,186 +67,189 @@
      ============================================================ -->
 <main id="contenu">
 
-  <!-- ── HERO ─────────────────────────────────────────────── -->
-  <section class="hero" aria-label="Présentation du projet">
-    <div class="wrap">
+  <!-- ── HERO IMMERSIF AVEC NOUVELLE COMPOSITION RESPONSIVE ── -->
+  <section class="hero-immersive" aria-label="Présentation du projet Temple Murugan Lieusaint">
+    <!-- Double source d'image adaptée : portrait mobile / panorama desktop -->
+    <picture class="hero-picture">
+      <!-- Écrans mobiles et tablettes portrait (<= 860px) : cadrage vertical -->
+      <source media="(max-width: 860px)" srcset="assets/img/hero-temple-mobile.webp" type="image/webp">
+      <source media="(max-width: 860px)" srcset="assets/img/hero-temple-mobile.png" type="image/png">
+      <!-- Écrans desktop, laptops et écrans larges (> 860px) : panorama horizontal avec Gopuram, Vel et Paon -->
+      <source media="(min-width: 861px)" srcset="assets/img/hero-temple-desktop.webp" type="image/webp">
+      <img
+        src="assets/img/hero-temple-desktop.png"
+        alt="Illustration du projet de temple Murugan au coucher du soleil à Lieusaint, avec son gopuram dravidien monumental, le Vel doré et le paon Mayil"
+        class="hero-bg-img"
+        fetchpriority="high"
+        loading="eager"
+        width="2048"
+        height="768"
+      >
+    </picture>
 
-      <!-- Texte -->
-      <div class="hero-copy">
-        <p class="kicker" data-i18n="hero_kicker">Un lieu pour</p>
-        <h1 data-i18n="hero_title">se rassembler,<br>transmettre<br>et partager</h1>
-        <p class="sub" data-i18n="hero_sub">Projet de création d'un lieu culturel et spirituel hindou à Lieusaint – Sénart, ouvert à tous.</p>
-        <div class="cta">
-          <a class="btn btn-or" href="don.html" data-i18n="hero_cta1">Soutenir le projet</a>
-          <a class="btn btn-ghost" href="projet.html" data-i18n="hero_cta2">Découvrir le projet</a>
+    <!-- Voile subtil garantissant une lisibilité 100% WCAG AAA sans masquer l'image -->
+    <div class="hero-scrim" aria-hidden="true"></div>
+
+    <div class="wrap hero-wrap">
+      <div class="hero-content">
+        <!-- Badge institutionnel & culturel avec symbole du Vel -->
+        <div class="hero-badge">
+          <svg viewBox="0 0 16 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M8 2 C5 7 3 12 8 16 C13 12 11 7 8 2 Z" fill="#FFCB55"/>
+            <line x1="8" y1="16" x2="8" y2="30" stroke="#FFCB55" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          <span>Projet culturel & spirituel · Lieusaint – Sénart</span>
+        </div>
+
+        <h1 class="hero-title">
+          Un lieu pour<br>
+          <span class="gold-gradient">se rassembler,</span><br>
+          transmettre & partager
+        </h1>
+
+        <p class="hero-desc">
+          À Lieusaint – Sénart, nous préparons la création d'un lieu culturel et spirituel hindou dédié à Murugan. Un ensemble architectural ouvert à tous, pensé pour la transmission de la culture tamoule et le vivre-ensemble.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-or" href="don.html">Soutenir le projet</a>
+          <a class="btn btn-glass" href="projet.html">Découvrir le projet</a>
+        </div>
+
+        <!-- Badges d'information et de transparence -->
+        <div class="hero-meta">
+          <div class="meta-item">
+            <span class="meta-dot" aria-hidden="true"></span>
+            <span>Phase de conception architecturale</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-dot" aria-hidden="true"></span>
+            <span>Association loi 1901 ouverte à tous</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-dot" aria-hidden="true"></span>
+            <span>Territoire de Grand Paris Sud</span>
+          </div>
         </div>
       </div>
-
-      <!-- Gopuram SVG animé + halo or -->
-      <div class="gate" aria-hidden="true">
-        <svg viewBox="0 0 400 490" role="presentation" focusable="false" aria-hidden="true">
-          <!-- Tier 0 : base -->
-          <g class="tier" style="--i:0">
-            <rect x="45" y="470" width="310" height="10" fill="#FFA53A"/>
-            <rect x="70" y="392" width="260" height="78" fill="#FFA53A"/>
-            <path d="M140 470V430A60 60 0 0 1 260 430V470Z" fill="#5A1512"/>
-            <rect x="70" y="392" width="260" height="8" fill="#FFCB55"/>
-          </g>
-          <!-- Tier 1 -->
-          <g class="tier" style="--i:1">
-            <polygon points="55,392 345,392 332,354 68,354" fill="#FFA53A"/>
-            <rect x="78" y="366" width="10" height="20" rx="5" fill="#5A1512"/><rect x="111" y="366" width="10" height="20" rx="5" fill="#5A1512"/><rect x="145" y="366" width="10" height="20" rx="5" fill="#5A1512"/><rect x="178" y="366" width="10" height="20" rx="5" fill="#5A1512"/><rect x="212" y="366" width="10" height="20" rx="5" fill="#5A1512"/><rect x="245" y="366" width="10" height="20" rx="5" fill="#5A1512"/><rect x="279" y="366" width="10" height="20" rx="5" fill="#5A1512"/><rect x="312" y="366" width="10" height="20" rx="5" fill="#5A1512"/>
-            <rect x="49" y="388" width="302" height="8" rx="2" fill="#FFCB55"/>
-          </g>
-          <!-- Tier 2 -->
-          <g class="tier" style="--i:2">
-            <polygon points="72,346 328,346 315,308 85,308" fill="#FFA53A"/>
-            <rect x="95" y="320" width="10" height="20" rx="5" fill="#5A1512"/><rect x="128" y="320" width="10" height="20" rx="5" fill="#5A1512"/><rect x="162" y="320" width="10" height="20" rx="5" fill="#5A1512"/><rect x="195" y="320" width="10" height="20" rx="5" fill="#5A1512"/><rect x="228" y="320" width="10" height="20" rx="5" fill="#5A1512"/><rect x="262" y="320" width="10" height="20" rx="5" fill="#5A1512"/><rect x="295" y="320" width="10" height="20" rx="5" fill="#5A1512"/>
-            <rect x="66" y="342" width="268" height="8" rx="2" fill="#FFCB55"/>
-          </g>
-          <!-- Tier 3 -->
-          <g class="tier" style="--i:3">
-            <polygon points="89,300 311,300 298,262 102,262" fill="#FFA53A"/>
-            <rect x="112" y="274" width="10" height="20" rx="5" fill="#5A1512"/><rect x="145" y="274" width="10" height="20" rx="5" fill="#5A1512"/><rect x="178" y="274" width="10" height="20" rx="5" fill="#5A1512"/><rect x="212" y="274" width="10" height="20" rx="5" fill="#5A1512"/><rect x="245" y="274" width="10" height="20" rx="5" fill="#5A1512"/><rect x="278" y="274" width="10" height="20" rx="5" fill="#5A1512"/>
-            <rect x="83" y="296" width="234" height="8" rx="2" fill="#FFCB55"/>
-          </g>
-          <!-- Tier 4 -->
-          <g class="tier" style="--i:4">
-            <polygon points="105,254 295,254 282,216 118,216" fill="#FFA53A"/>
-            <rect x="128" y="228" width="10" height="20" rx="5" fill="#5A1512"/><rect x="162" y="228" width="10" height="20" rx="5" fill="#5A1512"/><rect x="195" y="228" width="10" height="20" rx="5" fill="#5A1512"/><rect x="229" y="228" width="10" height="20" rx="5" fill="#5A1512"/><rect x="262" y="228" width="10" height="20" rx="5" fill="#5A1512"/>
-            <rect x="99" y="250" width="202" height="8" rx="2" fill="#FFCB55"/>
-          </g>
-          <!-- Tier 5 -->
-          <g class="tier" style="--i:5">
-            <polygon points="121,208 279,208 266,170 134,170" fill="#FFA53A"/>
-            <rect x="144" y="182" width="10" height="20" rx="5" fill="#5A1512"/><rect x="178" y="182" width="10" height="20" rx="5" fill="#5A1512"/><rect x="212" y="182" width="10" height="20" rx="5" fill="#5A1512"/><rect x="246" y="182" width="10" height="20" rx="5" fill="#5A1512"/>
-            <rect x="115" y="204" width="170" height="8" rx="2" fill="#FFCB55"/>
-          </g>
-          <!-- Tier 6 -->
-          <g class="tier" style="--i:6">
-            <polygon points="136,162 264,162 251,124 149,124" fill="#FFA53A"/>
-            <rect x="159" y="136" width="10" height="20" rx="5" fill="#5A1512"/><rect x="195" y="136" width="10" height="20" rx="5" fill="#5A1512"/><rect x="231" y="136" width="10" height="20" rx="5" fill="#5A1512"/>
-            <rect x="130" y="158" width="140" height="8" rx="2" fill="#FFCB55"/>
-          </g>
-          <!-- Tier 7 : flèche et kumbam -->
-          <g class="tier" style="--i:7">
-            <path d="M142 124 A58 44 0 0 1 258 124Z" fill="#FFA53A"/>
-            <rect x="136" y="120" width="128" height="8" rx="2" fill="#FFCB55"/>
-            <!-- Kumbam (pot de kalasha stylisé) -->
-            <ellipse cx="200" cy="92" rx="18" ry="22" fill="#FFA53A" stroke="#FFCB55" stroke-width="2"/>
-            <ellipse cx="200" cy="80" rx="10" ry="8" fill="#FFCB55"/>
-            <line x1="200" y1="58" x2="200" y2="72" stroke="#FFCB55" stroke-width="3" stroke-linecap="round"/>
-            <circle cx="200" cy="55" r="8" fill="#FFCB55"/>
-            <!-- Drapeaux décoratifs -->
-            <line x1="164" y1="120" x2="164" y2="58" stroke="#FFCB55" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.6"/>
-            <line x1="236" y1="120" x2="236" y2="58" stroke="#FFCB55" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.6"/>
-          </g>
-        </svg>
-      </div>
-
     </div>
   </section>
 
-  <!-- ── PILIERS ────────────────────────────────────────────── -->
-  <div class="pillars" aria-label="Les trois piliers du projet">
+  <!-- ── LES 3 PILIERS DU PROJET ────────────────────────────── -->
+  <div class="pillars" aria-label="Les trois piliers fondamentaux du projet">
     <div class="pillar">
       <div class="pillar-num" aria-hidden="true">1</div>
-      <h2 data-i18n="p1_t">Un projet culturel</h2>
-      <p data-i18n="p1_d">Un lieu architectural unique, symbole de diversité culturelle et de richesse.</p>
+      <h2>Un projet culturel</h2>
+      <p>Un ensemble architectural unique et chaleureux, symbole de richesse patrimoniale et de rayonnement pour le territoire.</p>
     </div>
     <div class="pillar">
       <div class="pillar-num" aria-hidden="true">2</div>
-      <h2 data-i18n="p2_t">Un espace ouvert à tous</h2>
-      <p data-i18n="p2_d">Un lieu de rencontres, de partage et de solidarité dans le respect et l'inclusion de toutes les cultures.</p>
+      <h2>Un espace ouvert à tous</h2>
+      <p>Un lieu de rencontre, d'échange et de solidarité, dans le respect mutuel et l'inclusion de toutes les sensibilités.</p>
     </div>
     <div class="pillar">
       <div class="pillar-num" aria-hidden="true">3</div>
-      <h2 data-i18n="p3_t">Transmission aux générations futures</h2>
-      <p data-i18n="p3_d">Des activités culturelles, éducatives et spirituelles pour préserver et transmettre notre héritage.</p>
+      <h2>Transmission aux générations</h2>
+      <p>Des ateliers éducatifs, artistiques et linguistiques pour préserver et transmettre un héritage millénaire.</p>
     </div>
   </div>
 
-  <!-- ── INTRODUCTION ──────────────────────────────────────── -->
+  <!-- ── INTRODUCTION & VISION ──────────────────────────────── -->
   <section class="block" aria-labelledby="intro-h">
     <div class="wrap two">
-      <!-- Colonne image -->
-        <!-- Photographie d'inspiration pour le projet -->
-        <figure class="img-slot" style="aspect-ratio: 4/3; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-lg);">
-          <img src="assets/img/temple-sunset.jpg" alt="Temple dédié à Murugan au crépuscule" loading="lazy" width="800" height="600" style="width:100%; height:100%; object-fit:cover;">
+      <!-- Colonne Visuel d'ambiance -->
+      <div>
+        <figure class="img-slot" style="aspect-ratio: 4/3; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg);">
+          <img src="assets/img/murugan-temple-demarche.jpg" alt="Temple de Murugan — inspiration pour le projet culturel de Lieusaint" loading="lazy" width="800" height="600" style="width:100%; height:100%; object-fit:cover;">
         </figure>
-      <!-- Colonne texte -->
+      </div>
+
+      <!-- Colonne texte & démarche -->
       <div class="stack">
-        <p class="eyebrow" data-i18n="eyebrow_intro">Notre projet</p>
-        <h2 class="title" id="intro-h" data-i18n="intro_h">Un projet pour aujourd'hui et pour les générations futures</h2>
-        <p class="lead">À Lieusaint – Sénart, nous préparons la création d'un lieu culturel et spirituel hindou, dédié à Murugan. Il est pensé pour transmettre la culture tamoule et la tradition hindoue, et pour accueillir tous les habitants du territoire.</p>
-        <p class="muted">Le projet est aujourd'hui en phase de conception : nous échangeons avec des architectes. Ce site raconte chaque étape, au fur et à mesure.</p>
-        <p><a class="btn btn-rouge" href="projet.html" data-i18n="intro_more">Découvrir le projet</a></p>
+        <p class="eyebrow">Notre démarche</p>
+        <h2 class="title" id="intro-h">Un projet pour aujourd'hui et pour les générations futures</h2>
+        <p class="lead">À Lieusaint, au cœur de la ville nouvelle de Sénart, nous posons les bases d'un espace vivant, harmonieux et pérenne.</p>
+        <p class="muted">Le temple est pensé pour être à la fois un lieu de culte dravidien authentique et un centre culturel accueillant des conférences, des cours de langue, de danse, de musique carnatique et des fêtes conviviales ouvertes aux habitants.</p>
+        <p class="muted">Actuellement en phase de conception et d'échanges avec des architectes qualifiés, notre collectif partage chaque étape avec transparence et rigueur.</p>
+        <p style="padding-top: var(--s-2);"><a class="btn btn-rouge" href="projet.html">En savoir plus sur le projet</a></p>
       </div>
     </div>
   </section>
 
-  <!-- Séparateur kudu -->
-  <div class="kudu" aria-hidden="true"></div>
+  <!-- Séparateur ornemental Vel -->
+  <div class="vel-divider" aria-hidden="true">
+    <span class="vel-divider-line"></span>
+    <span class="vel-icon">
+      <svg viewBox="0 0 24 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2 C8 9 5 16 12 21 C19 16 16 9 12 2 Z" fill="#FFCB55" stroke="#FFA53A"/>
+        <line x1="12" y1="21" x2="12" y2="44" stroke="#FFCB55" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </span>
+    <span class="vel-divider-line"></span>
+  </div>
 
-  <!-- ── AVANCEMENT ─────────────────────────────────────────── -->
+  <!-- ── AVANCEMENT DU PROJET ───────────────────────────────── -->
   <section class="block raised" aria-labelledby="st-h">
     <div class="wrap two balanced">
-      <!-- Colonne gauche : titre + contexte -->
+      <!-- Colonne gauche : Contexte -->
       <div>
-        <p class="eyebrow" data-i18n="eyebrow_avanc">Où en sommes-nous</p>
-        <h2 class="title" id="st-h" data-i18n="st_h">Le projet se construit avec vous</h2>
-        <p class="muted" style="max-width: 38ch; margin-block-end: var(--s-5);">La page Avancement se met à jour à chaque nouvelle étape franchie.</p>
-        <a class="btn btn-rouge" href="avancement.html" data-i18n="hd_avanc_t">Voir l'avancement</a>
+        <p class="eyebrow">Où en sommes-nous</p>
+        <h2 class="title" id="st-h">Le projet se construit pas à pas, avec vous</h2>
+        <p class="muted" style="max-width: 44ch; margin-block-end: var(--s-5);">Chaque palier franchi renforce la viabilité du projet auprès des institutions et de nos partenaires territoriaux.</p>
+        <a class="btn btn-rouge" href="avancement.html">Voir l'avancement détaillé</a>
       </div>
-      <!-- Colonne droite : timeline -->
+
+      <!-- Colonne droite : Timeline -->
       <div>
-        <ol class="timeline" aria-label="Étapes du projet">
+        <ol class="timeline" aria-label="Étapes d'avancement du projet">
           <li class="timeline-item done">
             <div class="timeline-dot" aria-hidden="true">✓</div>
             <div class="timeline-content">
               <div class="timeline-header">
-                <span class="timeline-label" data-i18n="st1">Naissance du projet</span>
-                <span class="pill" data-i18n="s_done">Terminé</span>
+                <span class="timeline-label">Naissance du projet</span>
+                <span class="pill">Terminé</span>
               </div>
-              <p class="timeline-desc">Une équipe se mobilise pour créer un lieu culturel à Lieusaint – Sénart.</p>
+              <p class="timeline-desc">Constitution de l'équipe fondatrice et structuration de l'association à Lieusaint – Sénart.</p>
             </div>
           </li>
           <li class="timeline-item now">
             <div class="timeline-dot" aria-hidden="true">✦</div>
             <div class="timeline-content">
               <div class="timeline-header">
-                <span class="timeline-label" data-i18n="st2">Pétition de soutien</span>
-                <span class="pill" data-i18n="s_now">En cours</span>
+                <span class="timeline-label">Pétition de soutien citoyen</span>
+                <span class="pill">En cours</span>
               </div>
-              <p class="timeline-desc">Chaque signature montre que le projet répond à un besoin réel sur le territoire.</p>
+              <p class="timeline-desc">Chaque signature témoigne de l'attente et du besoin réel d'un tel équipement culturel sur le territoire.</p>
             </div>
           </li>
           <li class="timeline-item now">
             <div class="timeline-dot" aria-hidden="true">⬡</div>
             <div class="timeline-content">
               <div class="timeline-header">
-                <span class="timeline-label" data-i18n="st3">Conception architecturale</span>
-                <span class="pill" data-i18n="s_now">En cours</span>
+                <span class="timeline-label">Conception architecturale</span>
+                <span class="pill">En cours</span>
               </div>
-              <p class="timeline-desc">Le bâtiment est en cours de réflexion avec l'équipe d'architecture.</p>
+              <p class="timeline-desc">Élaboration des premières esquisses, volumétries et intégration paysagère avec l'équipe d'architectes.</p>
             </div>
           </li>
           <li class="timeline-item soon">
             <div class="timeline-dot" aria-hidden="true">4</div>
             <div class="timeline-content">
               <div class="timeline-header">
-                <span class="timeline-label" data-i18n="st4">Financement</span>
-                <span class="pill" data-i18n="s_soon">À venir</span>
+                <span class="timeline-label">Financement & Partenariats</span>
+                <span class="pill">À venir</span>
               </div>
+              <p class="timeline-desc">Campagnes de dons, mécénat et partenariats associatifs et institutionnels.</p>
             </div>
           </li>
           <li class="timeline-item soon">
             <div class="timeline-dot" aria-hidden="true">5</div>
             <div class="timeline-content">
               <div class="timeline-header">
-                <span class="timeline-label" data-i18n="st6">Construction</span>
-                <span class="pill" data-i18n="s_soon">À venir</span>
+                <span class="timeline-label">Construction & Pose de la première pierre</span>
+                <span class="pill">À venir</span>
               </div>
+              <p class="timeline-desc">Lancement des travaux et suivi régulier du chantier.</p>
             </div>
           </li>
         </ol>
@@ -252,85 +257,158 @@
     </div>
   </section>
 
-  <!-- ── CE QU'ON Y FERA ────────────────────────────────────── -->
+  <!-- ── CE QU'ON Y FERA (AVEC ICÔNES VECTORIELLES PROFESSIONNELLES) ── -->
   <section class="block" aria-labelledby="act-h">
     <div class="wrap">
-      <p class="eyebrow" data-i18n="eyebrow_act">Le lieu de demain</p>
-      <h2 class="title" id="act-h" data-i18n="act_h">Ce qu'on y fera</h2>
+      <div style="text-align: center; max-width: 640px; margin-inline: auto; margin-block-end: var(--s-6);">
+        <p class="eyebrow" style="justify-content: center;">Le lieu de demain</p>
+        <h2 class="title" id="act-h">Ce qu'on y fera</h2>
+        <p class="muted">Un espace pluriel où spiritualité, art, tradition et citoyenneté dialoguent au quotidien.</p>
+      </div>
 
       <div class="acts-grid">
+        <!-- 1. Culture & Arts -->
         <div class="act-card">
-          <div class="act-icon" aria-hidden="true">🎭</div>
-          <h3 data-i18n="a1_t">Événements culturels</h3>
-          <p data-i18n="a1_d">Fêtes, danse, musique et rencontres ouvertes à tous les habitants de Sénart.</p>
+          <div class="act-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z"/>
+              <path d="M3.6 9h16.8"/>
+              <path d="M3.6 15h16.8"/>
+              <path d="M11.5 3a17 17 0 0 0 0 18"/>
+              <path d="M12.5 3a17 17 0 0 1 0 18"/>
+            </svg>
+          </div>
+          <h3>Événements & Rayonnement culturel</h3>
+          <p>Expositions artistiques, festivals traditionnels, concerts de musique carnatique et danses classiques (Bharatanatyam) ouverts à tous les publics.</p>
         </div>
+
+        <!-- 2. Transmission & Éducation -->
         <div class="act-card">
-          <div class="act-icon" aria-hidden="true">📚</div>
-          <h3 data-i18n="a2_t">Transmission et éducation</h3>
-          <p data-i18n="a2_d">Des activités pour transmettre la langue, les arts et l'histoire aux plus jeunes.</p>
+          <div class="act-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+            </svg>
+          </div>
+          <h3>Transmission & Éducation</h3>
+          <p>Cours de langue tamoule, ateliers d'histoire, cours de philosophie et soutien éducatif pour donner des repères solides aux jeunes générations.</p>
         </div>
+
+        <!-- 3. Vie spirituelle & Méditation -->
         <div class="act-card">
-          <div class="act-icon" aria-hidden="true">🪔</div>
-          <h3 data-i18n="a3_t">Vie spirituelle</h3>
-          <p data-i18n="a3_d">Célébrations et moments de recueillement, pour ceux qui le souhaitent.</p>
+          <div class="act-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2c1.5 3 4 5.5 4 9a6 6 0 1 1-12 0c0-3.5 2.5-6 4-9 1 2 3 3 4 0z"/>
+            </svg>
+          </div>
+          <h3>Vie spirituelle & Paix intérieure</h3>
+          <p>Célébrations religieuses traditionnelles, rituels sacrés védiques et espaces silencieux propices au recueillement et à la méditation personnelle.</p>
         </div>
+
+        <!-- 4. Rencontres & Solidarité -->
         <div class="act-card">
-          <div class="act-icon" aria-hidden="true">🤝</div>
-          <h3 data-i18n="a4_t">Rencontres entre cultures</h3>
-          <p data-i18n="a4_d">Des moments partagés avec les associations et les voisins du territoire.</p>
+          <div class="act-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3>Vivre-ensemble & Solidarité locale</h3>
+          <p>Actions d'entraide, repas partagés (Annadhanam), échanges interculturels et collaborations étroites avec le tissu associatif sénartais.</p>
         </div>
       </div>
 
-      <p class="fine muted" style="margin-top: var(--s-5);">
-        <span class="todo">À valider avec l'équipe</span> : ces activités reprennent l'esprit du projet ; le programme précis dépendra du projet architectural.
+      <p class="fine muted" style="margin-top: var(--s-6); text-align: center;">
+        <span class="todo">Orientations programmatiques</span> · Le détail précis des espaces sera ajusté en concertation avec les architectes et la municipalité.
       </p>
     </div>
   </section>
 
-  <!-- Séparateur kudu or -->
+  <!-- Frise Kudu décorative dravidienne -->
   <div class="kudu kudu-or" aria-hidden="true"></div>
 
-  <!-- ── PARTICIPER ─────────────────────────────────────────── -->
+  <!-- ── PARTICIPER AU PROJET (AVEC ICÔNES VECTORIELLES) ────── -->
   <section class="block raised" aria-labelledby="part-h">
     <div class="wrap">
-      <p class="eyebrow" data-i18n="eyebrow_part">Votre rôle</p>
-      <h2 class="title" id="part-h" data-i18n="part_h">Participer au projet</h2>
+      <div style="text-align: center; max-width: 620px; margin-inline: auto; margin-block-end: var(--s-6);">
+        <p class="eyebrow" style="justify-content: center;">Votre engagement</p>
+        <h2 class="title" id="part-h">Comment participer au projet</h2>
+        <p class="muted">Chaque contribution compte. Choisissez la modalité qui correspond à votre souhait d'implication.</p>
+      </div>
 
       <div class="ways-grid">
-        <!-- Adhérer -->
+        <!-- 1. Adhérer -->
         <a class="way-card" href="adhesion.html">
-          <div class="way-icon" aria-hidden="true">✍️</div>
-          <h3 data-i18n="w1_t">Adhérer à l'association</h3>
-          <p data-i18n="w1_d">Participer à la vie du projet et suivre son avancement.</p>
-          <span class="way-arrow" data-i18n="btn_join">Adhérer</span>
+          <div class="way-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <line x1="19" y1="8" x2="19" y2="14"/>
+              <line x1="22" y1="11" x2="16" y2="11"/>
+            </svg>
+          </div>
+          <h3>Adhérer à l'association</h3>
+          <p>Participez aux assemblées, votez les orientations et suivez de l'intérieur chaque étape clé.</p>
+          <span class="way-arrow">Rejoindre</span>
         </a>
-        <!-- Donner -->
+
+        <!-- 2. Donner -->
         <a class="way-card" href="don.html">
-          <div class="way-icon" aria-hidden="true">💛</div>
-          <h3 data-i18n="w2_t">Faire un don</h3>
-          <p data-i18n="w2_d">Contribuer selon vos moyens, sans obligation.</p>
-          <span class="way-arrow" data-i18n="btn_donate">Faire un don</span>
+          <div class="way-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+          <h3>Faire un don</h3>
+          <p>Soutenez le financement des études architecturales et des démarches initiales selon vos moyens.</p>
+          <span class="way-arrow">Donner</span>
         </a>
-        <!-- Pétition -->
+
+        <!-- 3. Pétition -->
         <a class="way-card" href="participer.html#petition" data-cfg="petitionUrl">
-          <div class="way-icon" aria-hidden="true">📝</div>
-          <h3 data-i18n="w3_t">Signer la pétition</h3>
-          <p data-i18n="w3_d">Montrer votre soutien au projet en quelques secondes.</p>
-          <span class="way-arrow" data-i18n="go">Signer</span>
+          <div class="way-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+          </div>
+          <h3>Signer la pétition</h3>
+          <p>Un geste citoyen rapide et gratuit qui démontre l'adhésion populaire auprès des décideurs.</p>
+          <span class="way-arrow">Signer</span>
         </a>
-        <!-- Partenaire -->
+
+        <!-- 4. Devenir Partenaire -->
         <a class="way-card" href="contact.html">
-          <div class="way-icon" aria-hidden="true">🏢</div>
-          <h3 data-i18n="w4_t">Devenir partenaire</h3>
-          <p data-i18n="w4_d">Pour les associations, entreprises et acteurs locaux.</p>
-          <span class="way-arrow" data-i18n="go">Nous écrire</span>
+          <div class="way-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+            </svg>
+          </div>
+          <h3>Devenir partenaire</h3>
+          <p>Pour les institutions, entreprises, mécènes et associations souhaitant co-construire.</p>
+          <span class="way-arrow">Nous écrire</span>
         </a>
-        <!-- Partager -->
+
+        <!-- 5. Relayer -->
         <a class="way-card" href="#" data-share>
-          <div class="way-icon" aria-hidden="true">📣</div>
-          <h3 data-i18n="w5_t">Relayer le projet</h3>
-          <p data-i18n="w5_d">Le faire connaître autour de vous et sur les réseaux.</p>
-          <span class="way-arrow" data-i18n="go_share">Partager</span>
+          <div class="way-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <circle cx="18" cy="5" r="3"/>
+              <circle cx="6" cy="12" r="3"/>
+              <circle cx="18" cy="19" r="3"/>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+            </svg>
+          </div>
+          <h3>Relayer le projet</h3>
+          <p>Faites découvrir le projet à votre entourage, vos collègues et sur vos réseaux sociaux.</p>
+          <span class="way-arrow">Partager</span>
         </a>
       </div>
     </div>
@@ -339,33 +417,36 @@
 </main>
 
 <!-- ============================================================
-     PIED DE PAGE
+     PIED DE PAGE DU SITE
      ============================================================ -->
 <footer class="site">
   <div class="wrap">
-    <!-- Frise kudu décorative -->
     <div class="footer-kudu" aria-hidden="true"></div>
 
     <div class="cols">
-      <!-- À propos -->
+      <!-- Colonne 1 : Présentation -->
       <div>
         <h2>Temple Murugan · Lieusaint</h2>
-        <p data-i18n="foot_about">Projet de création d'un lieu culturel et spirituel hindou à Lieusaint – Sénart.</p>
+        <p>Projet associatif et citoyen pour la création d'un lieu culturel et spirituel hindou à Lieusaint – Sénart. Ouvert à tous dans un esprit d'harmonie et d'enrichissement mutuel.</p>
         <p><a class="js-mail" href="contact.html">Nous écrire</a></p>
       </div>
-      <!-- Navigation -->
+
+      <!-- Colonne 2 : Plan du site -->
       <div>
-        <h2 data-i18n="foot_nav">Le site</h2>
+        <h2>Le site</h2>
         <ul>
-          <li><a href="projet.html" data-i18n="nav_projet">Le projet</a></li>
-          <li><a href="avancement.html" data-i18n="nav_avanc">Avancement</a></li>
-          <li><a href="participer.html" data-i18n="nav_part">Participer</a></li>
-          <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+          <li><a href="projet.html">Le projet</a></li>
+          <li><a href="avancement.html">Avancement</a></li>
+          <li><a href="participer.html">Participer</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="adhesion.html">Adhérer</a></li>
+          <li><a href="don.html">Faire un don</a></li>
         </ul>
       </div>
-      <!-- Réseaux -->
+
+      <!-- Colonne 3 : Réseaux sociaux & communauté -->
       <div>
-        <h2 data-i18n="foot_follow">Nous suivre</h2>
+        <h2>Nous suivre</h2>
         <ul>
           <li data-social="instagram"><a data-social="instagram" href="#">Instagram</a></li>
           <li data-social="facebook"><a data-social="facebook" href="#">Facebook</a></li>
@@ -375,15 +456,18 @@
       </div>
     </div>
 
-    <p class="copy">
-      © Temple Murugan Lieusaint ·
-      <a href="mentions-legales.html" data-i18n="foot_legal">Mentions légales</a> ·
-      <a href="confidentialite.html" data-i18n="foot_priv">Confidentialité</a>
-    </p>
+    <div class="copy">
+      <span>© Temple Murugan Lieusaint — Tous droits réservés</span>
+      <div>
+        <a href="mentions-legales.html">Mentions légales</a> ·
+        <a href="confidentialite.html">Politique de confidentialité</a>
+      </div>
+    </div>
   </div>
 </footer>
 
-<!-- Scripts (ordre impératif : config → i18n → main) -->
-<script src="js/config.js"></script><script src="js/main.js"></script>
+<!-- Scripts (ordre impératif : config → main) -->
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

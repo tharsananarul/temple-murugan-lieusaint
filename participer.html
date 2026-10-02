@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="utf-8">
@@ -13,7 +13,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%237a1e1b'/%3E%3Cpath d='M50 14 62 34H38ZM32 38h36l6 16H26ZM24 58h52l8 26H16Z' fill='%23FFCB55'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -24,8 +24,11 @@
 <header class="site" id="header">
   <div class="wrap bar">
     <a class="brand" href="index.html" aria-label="Temple Murugan Lieusaint — accueil">
-      <b>Temple Murugan</b>
-      <span>Lieusaint · Sénart</span>
+      <img class="brand-logo" src="assets/img/logo-murugan.png" alt="" width="42" height="42" loading="eager" aria-hidden="true">
+      <div class="brand-text">
+        <b>Temple Murugan</b>
+        <span>Lieusaint · Sénart</span>
+      </div>
     </a>
     <nav class="main" id="menu" aria-label="Menu principal">
       <a href="projet.html" data-i18n="nav_projet">Le projet</a>
@@ -66,28 +69,52 @@
 
       <div class="ways-grid">
         <a class="way-card" href="adhesion.html">
-          <div class="way-icon" aria-hidden="true">✍️</div>
+          <div class="way-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <line x1="19" y1="8" x2="19" y2="14"/>
+              <line x1="22" y1="11" x2="16" y2="11"/>
+            </svg>
+          </div>
           <h3 data-i18n="w1_t">Adhérer à l'association</h3>
           <p data-i18n="w1_d">Participer à la vie du projet et suivre son avancement.</p>
           <span class="way-arrow" data-i18n="btn_join">Adhérer</span>
         </a>
 
         <a class="way-card" href="don.html">
-          <div class="way-icon" aria-hidden="true">💛</div>
+          <div class="way-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
           <h3 data-i18n="w2_t">Faire un don</h3>
           <p data-i18n="w2_d">Contribuer selon vos moyens, sans obligation.</p>
           <span class="way-arrow" data-i18n="btn_donate">Faire un don</span>
         </a>
 
         <a class="way-card" href="contact.html">
-          <div class="way-icon" aria-hidden="true">🏢</div>
+          <div class="way-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+            </svg>
+          </div>
           <h3 data-i18n="w4_t">Devenir partenaire</h3>
           <p data-i18n="w4_d">Pour les associations, entreprises et acteurs locaux.</p>
           <span class="way-arrow" data-i18n="go">Nous écrire</span>
         </a>
 
         <a class="way-card" href="#" data-share>
-          <div class="way-icon" aria-hidden="true">📣</div>
+          <div class="way-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <circle cx="18" cy="5" r="3"/>
+              <circle cx="6" cy="12" r="3"/>
+              <circle cx="18" cy="19" r="3"/>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+            </svg>
+          </div>
           <h3 data-i18n="w5_t">Relayer le projet</h3>
           <p data-i18n="w5_d">Le faire connaître autour de vous et sur les réseaux.</p>
           <span class="way-arrow" data-i18n="go_share">Partager</span>
