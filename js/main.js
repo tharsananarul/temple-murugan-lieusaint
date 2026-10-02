@@ -162,6 +162,13 @@
     // Add .reveal class to eligible elements
     var revealSelectors = [
       ".pillar",
+      ".triptych-card",
+      ".bento-card",
+      ".action-card",
+      ".ribbon-item",
+      ".roadmap-item",
+      ".editorial-frame",
+      ".spaces-list",
       ".act-card",
       ".way-card",
       ".block .title",
@@ -188,8 +195,8 @@
         }
       });
     }, {
-      threshold: 0.12,
-      rootMargin: "0px 0px -60px 0px"
+      threshold: 0.10,
+      rootMargin: "0px 0px -40px 0px"
     });
 
     revealElements.forEach(function (el) {
@@ -197,7 +204,7 @@
     });
 
     // Add stagger class to parent grids
-    $$(".acts-grid, .ways-grid, .pillars").forEach(function (grid) {
+    $$(".acts-grid, .ways-grid, .pillars, .triptych-grid, .bento-grid, .action-showcase, .action-ribbon").forEach(function (grid) {
       grid.classList.add("reveal-stagger");
     });
   }
