@@ -60,13 +60,12 @@
 <header class="site" id="header">
   <div class="wrap bar">
     <!-- Identité principale : Logo royal + nom net, sans surcharge -->
-    <a class="brand" href="index.html" aria-label="Temple Murugan Lieusaint — Retour à l'accueil">
+    <a class="brand" href="index.html" aria-label="Temple Murugan &mdash; Retour a l'accueil">
       <div class="brand-emblem-wrap">
         <img class="brand-logo" src="assets/img/logo-dore-murugan.png" alt="Emblème royal du Temple Murugan Lieusaint" width="54" height="54" loading="eager" fetchpriority="high">
       </div>
       <div class="brand-identity">
         <span class="brand-main">Temple Murugan</span>
-        <span class="brand-sub">Lieusaint · Sénart</span>
       </div>
     </a>
 
@@ -75,7 +74,7 @@
       <a class="nav-link" href="projet.html" data-i18n="nav_projet">Le projet</a>
       <a class="nav-link" href="avancement.html" data-i18n="nav_avanc">Avancement</a>
       <a class="nav-link" href="participer.html" data-i18n="nav_part">Participer</a>
-      <a class="nav-link" href="contact.html" data-i18n="nav_contact">Contact</a>
+      <a class="nav-link" href="index.html#location-title">Nous trouver</a> <a class="nav-link" href="contact.html" data-i18n="nav_contact">Contact</a>
       <a class="nav-link header-join" href="adhesion.html" data-i18n="btn_join">Adhérer</a>
     </nav>
 
@@ -135,9 +134,15 @@
       </a>
     </li>
     <li>
+      <a class="drawer-nav-link" href="index.html#location-title">
+        <span>Nous trouver</span>
+        <span class="drawer-nav-number">04</span>
+      </a>
+    </li>
+    <li>
       <a class="drawer-nav-link" href="contact.html">
         <span>Contact</span>
-        <span class="drawer-nav-number">04</span>
+        <span class="drawer-nav-number">05</span>
       </a>
     </li>
   </ul>
@@ -179,6 +184,12 @@
 
     <!-- Halo d'or sacré pulsant derrière le Gopuram -->
     <div class="hero-ambient-glow" aria-hidden="true"></div>
+    <div class="identity-motif identity-vel" aria-hidden="true">
+      <svg viewBox="0 0 24 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2 C8 9 5 16 12 21 C19 16 16 9 12 2 Z" fill="#F2B84B" stroke="#FFF0C2" stroke-width="1.2"/>
+        <line x1="12" y1="21" x2="12" y2="45" stroke="#F2B84B" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </div>
 
     <!-- Scrim cinématique multi-stop préservant l'éclat du temple et garantissant la lisibilité -->
     <div class="hero-scrim" aria-hidden="true"></div>
@@ -214,82 +225,9 @@
         </div>
 
         <!-- Cartes de prestige flottantes : profondeur et réassurance sans débordement -->
-        <div class="hero-trust-cards" aria-label="Piliers majeurs du projet">
-          <div class="hero-trust-card">
-            <div class="trust-card-title">
-              <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 20h18M5 20v-8h14v8M3 12l9-7 9 7M8 15v5M12 15v5M16 15v5"/></svg>
-              <span>Édifice Dravidien</span>
-            </div>
-            <p class="trust-card-desc">Fidélité au Vastu Shastra et élégance des sculptures séculaires.</p>
-          </div>
-
-          <div class="hero-trust-card">
-            <div class="trust-card-title">
-              <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m8 12 2.2 2.2a2 2 0 0 0 2.8 0l1-1M5 10l3-3 3 3-3 3zM19 10l-3-3-3 3 3 3z"/></svg>
-              <span>Ouvert à Tous</span>
-            </div>
-            <p class="trust-card-desc">Concorde républicaine, dialogue culturel et accueil chaleureux.</p>
-          </div>
-
-          <div class="hero-trust-card">
-            <div class="trust-card-title">
-              <span aria-hidden="true">✦</span>
-              <span>Élan Citoyen</span>
-            </div>
-            <p class="trust-card-desc">100% financé par des dons privés, mécénat et souscriptions.</p>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
-
-  <!-- ── 2. SECTION FONDATIONS : CADRE CHAUD & RYTHME VISUEL ── -->
-  <section class="block section-foundations" aria-labelledby="fondations-h">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Les Piliers Fondateurs</p>
-        <h2 class="title" id="fondations-h">Une vision équilibrée entre mémoire et avenir</h2>
-        <p class="lead">Le Temple Murugan de Lieusaint s'appuie sur trois fondations majeures qui guident chaque choix architectural et associatif.</p>
-      </div>
-
-      <!-- Triptyque asymétrique sculpté avec micro-animations -->
-      <div class="triptych-grid">
-        <!-- Pilier 1 : Rayonnement et patrimoine architectural -->
-        <article class="triptych-card highlight">
-          <div class="triptych-badge" aria-hidden="true">01</div>
-          <h3>Patrimoine & Beauté Dravidienne</h3>
-          <p>Un ensemble architectural fidèle aux règles séculaires du Vastu Shastra et de l'art dravidien. Édifié en concertation avec des architectes qualifiés, il enrichira le paysage urbain sénartais d'un patrimoine d'une élégance rare.</p>
-        </article>
-
-        <!-- Pilier 2 : Fraternité et ouverture à la cité -->
-        <article class="triptych-card">
-          <div class="triptych-badge" aria-hidden="true">02</div>
-          <h3>Ouverture & Vivre-Ensemble</h3>
-          <p>Un espace laïquement respectueux des valeurs républicaines et chaleureusement ouvert à tous les habitants de Lieusaint et d'Île-de-France. Ici, la curiosité et l'amitié entre communautés sont au cœur de l'accueil.</p>
-        </article>
-
-        <!-- Pilier 3 : Transmission aux nouvelles générations -->
-        <article class="triptych-card">
-          <div class="triptych-badge" aria-hidden="true">03</div>
-          <h3>Transmission & Éducation</h3>
-          <p>Offrir aux jeunes générations les clés d'un héritage millénaire : cours de langue tamoule, ateliers d'histoire, pratique de la danse Bharatanatyam et de la musique carnatique pour construire des ponts d'avenir.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Séparateur ornemental Vel doré sacré -->
-  <div class="vel-divider" aria-hidden="true">
-    <span class="vel-divider-line"></span>
-    <span class="vel-icon">
-      <svg viewBox="0 0 24 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 2 C8 9 5 16 12 21 C19 16 16 9 12 2 Z" fill="#FFCB55" stroke="#FFA53A" stroke-width="1.5"/>
-        <line x1="12" y1="21" x2="12" y2="44" stroke="#FFCB55" stroke-width="2.5" stroke-linecap="round"/>
-      </svg>
-    </span>
-    <span class="vel-divider-line"></span>
-  </div>
 
   <!-- ── 3. SECTION DÉMARCHE & ESPACES : SHOWCASE ÉDITORIAL LUXE ── -->
   <section class="block section-ivory" aria-labelledby="demarche-h">
@@ -339,91 +277,6 @@
         <div style="padding-top: var(--s-3);">
           <a class="btn btn-rouge" href="projet.html">Découvrir le programme détaillé</a>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── 4. SECTION SOMBRE (BORDEAUX SACRÉ & OR) : ROADMAP & JALONS ── -->
-  <section class="block section-dark" aria-labelledby="roadmap-h">
-    <div class="wrap roadmap-container">
-      <!-- Colonne gauche : Contexte & Appel à mobilisation -->
-      <div>
-        <p class="eyebrow">Où en sommes-nous</p>
-        <h2 class="title" id="roadmap-h">Le temple se bâtit pas à pas, avec chacun de vous</h2>
-        <p class="lead" style="color: rgba(255, 255, 255, 0.88); margin-block-end: var(--s-5);">
-          Chaque étape franchie avec transparence et concertation renforce la crédibilité du projet auprès de la municipalité, de Grand Paris Sud et de nos partenaires techniques.
-        </p>
-        <div style="display:flex; flex-direction:column; gap: var(--s-3); align-items:flex-start;">
-          <a class="btn btn-gold btn-shine" href="participer.html#petition" data-cfg="petitionUrl">
-            <span>Signer la pétition citoyenne</span>
-          </a>
-          <a class="btn btn-glass" href="avancement.html">Voir le calendrier complet</a>
-        </div>
-      </div>
-
-      <!-- Colonne droite : Parcours des Jalons Interactifs -->
-      <div>
-        <ol class="roadmap-stream" aria-label="Étapes d'avancement du projet">
-          <!-- Étape 1 : Terminée -->
-          <li class="roadmap-item done">
-            <div class="roadmap-dot" aria-hidden="true">✓</div>
-            <div class="roadmap-content">
-              <div class="roadmap-header">
-                <span class="roadmap-title">Structuration de l'Association</span>
-                <span class="roadmap-tag tag-done">Terminé</span>
-              </div>
-              <p class="roadmap-desc">Création de l'association loi 1901 à Lieusaint et constitution d'une équipe fondatrice collégiale et dévouée.</p>
-            </div>
-          </li>
-
-          <!-- Étape 2 : En cours (Pétition) -->
-          <li class="roadmap-item active">
-            <div class="roadmap-dot" aria-hidden="true">✦</div>
-            <div class="roadmap-content">
-              <div class="roadmap-header">
-                <span class="roadmap-title">Pétition de Soutien Citoyen</span>
-                <span class="roadmap-tag tag-active">En cours</span>
-              </div>
-              <p class="roadmap-desc">Mobilisation citoyenne cruciale pour prouver l'adhésion populaire et l'attente réelle du sanctuaire sur le territoire.</p>
-            </div>
-          </li>
-
-          <!-- Étape 3 : En cours (Architecture) -->
-          <li class="roadmap-item active">
-            <div class="roadmap-dot" aria-hidden="true">⬡</div>
-            <div class="roadmap-content">
-              <div class="roadmap-header">
-                <span class="roadmap-title">Conception & Esquisses Architectes</span>
-                <span class="roadmap-tag tag-active">En cours</span>
-              </div>
-              <p class="roadmap-desc">Définition du cahier des charges volumétrique, paysager et environnemental avec l'équipe de maîtrise d'œuvre.</p>
-            </div>
-          </li>
-
-          <!-- Étape 4 : À venir -->
-          <li class="roadmap-item upcoming">
-            <div class="roadmap-dot" aria-hidden="true">4</div>
-            <div class="roadmap-content">
-              <div class="roadmap-header">
-                <span class="roadmap-title">Campagne de Mécénat & Fonds de Dotation</span>
-                <span class="roadmap-tag tag-soon">À venir</span>
-              </div>
-              <p class="roadmap-desc">Ouverture des souscriptions citoyennes et recherche de mécènes pour financer le dépôt du permis de construire.</p>
-            </div>
-          </li>
-
-          <!-- Étape 5 : À venir -->
-          <li class="roadmap-item upcoming">
-            <div class="roadmap-dot" aria-hidden="true">5</div>
-            <div class="roadmap-content">
-              <div class="roadmap-header">
-                <span class="roadmap-title">Pose de la Première Pierre & Édification</span>
-                <span class="roadmap-tag tag-soon">À venir</span>
-              </div>
-              <p class="roadmap-desc">Bénédiction inaugurale du terrain et démarrage des travaux sous la supervision des sculpteurs dravidiens traditionnels.</p>
-            </div>
-          </li>
-        </ol>
       </div>
     </div>
   </section>
@@ -632,8 +485,8 @@
   <div class="wrap location-grid">
     <div class="location-copy">
       <p class="eyebrow">Nous trouver</p>
-      <h2 class="title" id="location-title">Le Temple à Savigny-le-Temple</h2>
-      <p class="lead">Retrouvez le projet au <strong>2 All. des Échoppes, Savigny-le-Temple</strong>.</p>
+      <h2 class="title" id="location-title">Le Temple actuel à Savigny-le-Temple</h2>
+      <p class="lead">Retrouvez le Temple actuel au <strong>2 All. des Échoppes, Savigny-le-Temple</strong>, avant la construction du nouveau temple.</p>
       <a class="btn btn-rouge" href="https://www.openstreetmap.org/search?query=2%20All.%20des%20%C3%89choppes%20Savigny-le-Temple" target="_blank" rel="noopener noreferrer">
         Ouvrir l'itinéraire
       </a>
@@ -654,60 +507,37 @@
      PIED DE PAGE DU SITE (DUSK SACRÉ & OR)
      ============================================================ -->
 <footer class="site" role="contentinfo">
-  <div class="wrap">
-    <div class="kudu footer-kudu" aria-hidden="true"></div>
-
-    <div class="cols">
-      <!-- Colonne 1 : Présentation & Vocation -->
-      <div>
-        <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
-          <img src="assets/img/logo-dore-murugan.png" alt="" width="48" height="48" style="border-radius:50%; border:1.5px solid rgba(255,203,85,0.4);" aria-hidden="true">
-          <div>
-            <h2 style="margin:0; font-size:var(--fs-md); color:#FFFFFF;">Temple Murugan</h2>
-            <span style="font-size:var(--fs-2xs); color:var(--or-400); letter-spacing:0.12em; text-transform:uppercase; font-weight:700;">Lieusaint · Sénart</span>
-          </div>
-        </div>
-        <p>Projet associatif et citoyen pour la création d'un sanctuaire culturel et spirituel hindou à Lieusaint – Sénart. Un lieu de mémoire, de dialogue et d'enrichissement mutuel ouvert à tous.</p>
-        <p><a class="js-mail" href="contact.html">Nous écrire par e-mail</a></p>
-      </div>
-
-      <!-- Colonne 2 : Plan du Site -->
-      <div>
-        <h2>Navigation</h2>
-        <ul>
-          <li><a href="projet.html">Le projet</a></li>
-          <li><a href="avancement.html">Avancement</a></li>
-          <li><a href="participer.html">Participer</a></li>
-          <li><a href="adhesion.html">Adhérer à l'association</a></li>
-          <li><a href="don.html">Faire un don</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-
-      <!-- Colonne 3 : Communauté & Réseaux -->
-      <div>
-        <h2>Rejoindre la Communauté</h2>
-        <ul>
-          <li data-social="instagram"><a data-social="instagram" href="#">Instagram</a></li>
-          <li data-social="facebook"><a data-social="facebook" href="#">Facebook</a></li>
-          <li data-social="youtube"><a data-social="youtube" href="#">YouTube</a></li>
-          <li data-social="tiktok"><a data-social="tiktok" href="#">TikTok</a></li>
-        </ul>
-        <p style="margin-top:var(--s-4); font-size:var(--fs-xs); color:rgba(255,223,136,0.7);">
-          Association régie par la loi du 1er juillet 1901.<br>
-          Enregistrée en préfecture de Seine-et-Marne.
-        </p>
-      </div>
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a class="footer-brand-link" href="index.html" aria-label="Temple Murugan Lieusaint &mdash; Accueil">
+        <span class="footer-logo-wrap"><img src="assets/img/logo-dore-murugan.png" alt="" width="56" height="56" aria-hidden="true"></span>
+        <span><strong>Temple Murugan</strong><small>Lieusaint &middot; S&eacute;nart</small></span>
+      </a>
+      <p>Un projet associatif et citoyen pour cr&eacute;er un lieu culturel et spirituel hindou ouvert &agrave; tous.</p>
+      <a class="footer-contact-link js-mail" href="contact.html">Nous &eacute;crire</a>
     </div>
-
-    <!-- Mentions légales & Droits -->
-    <div class="copy">
-      <span>© 2026 Temple Murugan Lieusaint — Tous droits réservés</span>
-      <div>
-        <a href="mentions-legales.html">Mentions légales</a> ·
-        <a href="confidentialite.html">Politique de confidentialité</a>
-      </div>
+    <nav class="footer-nav" aria-label="Navigation secondaire">
+      <h2>Explorer</h2>
+      <ul>
+        <li><a href="projet.html">Le projet</a></li>
+        <li><a href="avancement.html">Avancement</a></li>
+        <li><a href="participer.html">Participer</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="footer-social" aria-labelledby="footer-social-title">
+      <h2 id="footer-social-title">Nous suivre</h2>
+      <p>Les liens officiels seront ajout&eacute;s d&egrave;s leur ouverture.</p>
+      <ul>
+        <li><span class="social-placeholder"><span>Instagram</span><small>&Agrave; venir</small></span></li>
+        <li><span class="social-placeholder"><span>Facebook</span><small>&Agrave; venir</small></span></li>
+        <li><span class="social-placeholder"><span>TikTok</span><small>&Agrave; venir</small></span></li>
+      </ul>
     </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>&copy; 2026 Temple Murugan Lieusaint</span>
+    <span><a href="mentions-legales.html">Mentions l&eacute;gales</a><span aria-hidden="true"> &middot; </span><a href="confidentialite.html">Confidentialit&eacute;</a></span>
   </div>
 </footer>
 

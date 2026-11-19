@@ -36,7 +36,8 @@
       var first = null;
       fields.forEach(function (f) { if (!validate(f) && !first) { first = f; } });
       if (first) { first.focus(); return; }
-      if (form.querySelector('[name="_gotcha"]').value) { return; } // robot : on ignore
+      var honeypot = form.querySelector('[name="_gotcha"]');
+      if (honeypot && honeypot.value) { return; } // robot : on ignore
 
       function done(isDemo) {
         form.style.display = "none";

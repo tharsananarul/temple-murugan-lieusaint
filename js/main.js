@@ -129,28 +129,6 @@
     }
   }
 
-  /* ── 2b. PROGRESSION DE LECTURE & TILT DES CARTES ───────── */
-  var progress = document.createElement("div");
-  progress.className = "scroll-progress";
-  progress.setAttribute("aria-hidden", "true");
-  document.body.appendChild(progress);
-
-  var progressTick = false;
-  function updateProgress() {
-    var max = document.documentElement.scrollHeight - window.innerHeight;
-    var ratio = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
-    progress.style.width = (ratio * 100) + "%";
-    progressTick = false;
-  }
-  window.addEventListener("scroll", function () {
-    if (!progressTick) {
-      progressTick = true;
-      window.requestAnimationFrame(updateProgress);
-    }
-  }, { passive: true });
-  window.addEventListener("resize", updateProgress, { passive: true });
-  updateProgress();
-
   var canTilt = window.matchMedia("(hover: hover) and (pointer: fine)").matches &&
     !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (canTilt) {

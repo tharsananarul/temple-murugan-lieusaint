@@ -32,20 +32,19 @@
 <!-- En-tête -->
 <header class="site" id="header">
   <div class="wrap bar">
-    <a class="brand" href="index.html" aria-label="Temple Murugan Lieusaint — Retour à l'accueil">
+    <a class="brand" href="index.html" aria-label="Temple Murugan &mdash; Retour a l'accueil">
       <div class="brand-logo-frame">
         <img class="brand-logo" src="assets/img/logo-dore-murugan.png" alt="Emblème royal du Temple Murugan Lieusaint" width="66" height="66" loading="eager">
       </div>
       <div class="brand-text">
         <b>Temple Murugan</b>
-        <span>Lieusaint · Sénart</span>
       </div>
     </a>
     <nav class="main" id="menu" aria-label="Menu principal">
       <a href="projet.html" data-i18n="nav_projet">Le projet</a>
       <a href="avancement.html" data-i18n="nav_avanc">Avancement</a>
       <a href="participer.html" aria-current="page" data-i18n="nav_part">Participer</a>
-      <a href="contact.html" data-i18n="nav_contact">Contact</a>
+      <a class="nav-link" href="index.html#location-title">Nous trouver</a> <a href="contact.html" data-i18n="nav_contact">Contact</a>
       <a class="header-join" href="adhesion.html" data-i18n="btn_join">Adhérer</a>
       <a class="m-only" href="don.html" data-i18n="btn_donate">Faire un don</a>
     </nav>
@@ -262,55 +261,37 @@
 
 <!-- Pied de page -->
 <footer class="site" role="contentinfo">
-  <div class="wrap">
-    <div class="footer-kudu" aria-hidden="true"></div>
-    <div class="cols">
-      <div>
-        <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
-          <img src="assets/img/logo-dore-murugan.png" alt="" width="48" height="48" style="border-radius:50%; border:1px solid rgba(255,203,85,0.4);" aria-hidden="true">
-          <div>
-            <h2 style="margin:0; font-size:var(--fs-md); color:#FFFFFF;">Temple Murugan</h2>
-            <span style="font-size:var(--fs-2xs); color:var(--or-400); letter-spacing:0.12em; text-transform:uppercase;">Lieusaint · Sénart</span>
-          </div>
-        </div>
-        <p>Projet associatif et citoyen pour la création d'un sanctuaire culturel et spirituel hindou à Lieusaint – Sénart. Un lieu de mémoire, de dialogue et d'enrichissement mutuel ouvert à tous.</p>
-        <p><a class="js-mail" href="contact.html">Nous écrire par e-mail</a></p>
-      </div>
-
-      <div>
-        <h2>Navigation</h2>
-        <ul>
-          <li><a href="projet.html">Le projet</a></li>
-          <li><a href="avancement.html">Avancement</a></li>
-          <li><a href="participer.html">Participer</a></li>
-          <li><a href="adhesion.html">Adhérer à l'association</a></li>
-          <li><a href="don.html">Faire un don</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h2>Rejoindre la Communauté</h2>
-        <ul>
-          <li data-social="instagram"><a data-social="instagram" href="#">Instagram</a></li>
-          <li data-social="facebook"><a data-social="facebook" href="#">Facebook</a></li>
-          <li data-social="youtube"><a data-social="youtube" href="#">YouTube</a></li>
-          <li data-social="tiktok"><a data-social="tiktok" href="#">TikTok</a></li>
-        </ul>
-        <p style="margin-top:var(--s-4); font-size:var(--fs-xs); color:rgba(255,223,136,0.7);">
-          Association régie par la loi du 1er juillet 1901.<br>
-          Enregistrée en préfecture de Seine-et-Marne.
-        </p>
-      </div>
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a class="footer-brand-link" href="index.html" aria-label="Temple Murugan Lieusaint &mdash; Accueil">
+        <span class="footer-logo-wrap"><img src="assets/img/logo-dore-murugan.png" alt="" width="56" height="56" aria-hidden="true"></span>
+        <span><strong>Temple Murugan</strong><small>Lieusaint &middot; S&eacute;nart</small></span>
+      </a>
+      <p>Un projet associatif et citoyen pour cr&eacute;er un lieu culturel et spirituel hindou ouvert &agrave; tous.</p>
+      <a class="footer-contact-link js-mail" href="contact.html">Nous &eacute;crire</a>
     </div>
-
-    <div class="copy">
-      <span>© 2026 Temple Murugan Lieusaint — Tous droits réservés</span>
-      <div>
-        <a href="mentions-legales.html">Mentions légales</a> ·
-        <a href="confidentialite.html">Politique de confidentialité</a>
-      </div>
+    <nav class="footer-nav" aria-label="Navigation secondaire">
+      <h2>Explorer</h2>
+      <ul>
+        <li><a href="projet.html">Le projet</a></li>
+        <li><a href="avancement.html">Avancement</a></li>
+        <li><a href="participer.html">Participer</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="footer-social" aria-labelledby="footer-social-title">
+      <h2 id="footer-social-title">Nous suivre</h2>
+      <p>Les liens officiels seront ajout&eacute;s d&egrave;s leur ouverture.</p>
+      <ul>
+        <li><span class="social-placeholder"><span>Instagram</span><small>&Agrave; venir</small></span></li>
+        <li><span class="social-placeholder"><span>Facebook</span><small>&Agrave; venir</small></span></li>
+        <li><span class="social-placeholder"><span>TikTok</span><small>&Agrave; venir</small></span></li>
+      </ul>
     </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>&copy; 2026 Temple Murugan Lieusaint</span>
+    <span><a href="mentions-legales.html">Mentions l&eacute;gales</a><span aria-hidden="true"> &middot; </span><a href="confidentialite.html">Confidentialit&eacute;</a></span>
   </div>
 </footer>
 
