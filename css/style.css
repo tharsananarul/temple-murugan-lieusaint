@@ -2965,6 +2965,107 @@ footer.site a:hover {
 /* ============================================================
    18. RESPECT STRICT PREFERS-REDUCED-MOTION
    ============================================================ */
+/* Cohérence compacte des formulaires secondaires */
+.adhesion-page .contact-hero,
+.contact-hero {
+  background: var(--color-terracotta);
+}
+
+.adhesion-page .contact-hero-inner {
+  min-height: 220px;
+  align-items: end;
+  padding-block: clamp(2.5rem, 6vw, 4.5rem) clamp(2rem, 4vw, 3rem);
+}
+
+.adhesion-page .contact-hero h1 {
+  font-size: var(--type-h1);
+  line-height: 1.08;
+}
+
+.adhesion-page.legacy-page .block {
+  background: var(--color-ivory);
+  padding-block: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+.adhesion-page .two {
+  gap: clamp(1.25rem, 3vw, 3rem);
+}
+
+.adhesion-page .side {
+  background: var(--color-paper);
+  border: 1px solid var(--line-editorial);
+  border-radius: 4px;
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+
+.adhesion-page .side h2,
+.adhesion-page .side strong {
+  color: var(--ink-red);
+}
+
+.adhesion-page .side p,
+.adhesion-page .side li,
+.adhesion-page .grid {
+  font-size: var(--type-secondary);
+  line-height: 1.65;
+}
+
+.contact-icon {
+  display: inline-flex !important;
+  width: 2.25rem;
+  height: 2.25rem;
+  align-items: center;
+  justify-content: center;
+  margin-block-end: 1rem;
+  border: 1px solid var(--line-editorial);
+  border-radius: 50%;
+  color: var(--ink-red);
+  font-size: 1rem;
+}
+
+.adhesion-page .side .space-icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-block-end: 1rem;
+  border: 1px solid var(--line-editorial);
+  border-radius: 50%;
+  color: var(--ink-red);
+  background: transparent;
+}
+
+.bento-card,
+.triptych-card,
+.action-card {
+  min-height: 0;
+  padding: clamp(1.25rem, 2.4vw, 2rem);
+}
+
+.bento-card p,
+.triptych-card p,
+.action-card p,
+.spaces-list p,
+.hero-pillar-feature p,
+.hero-pillar-note p {
+  max-width: 68ch;
+  font-size: var(--type-secondary);
+  line-height: 1.65;
+}
+
+.bento-card h3,
+.triptych-card h3,
+.action-card h3 {
+  font-size: var(--type-h3);
+  line-height: 1.25;
+}
+
+.contact-hero::before {
+  background: url("../assets/img/murugan-temple-demarche.jpg") center / cover no-repeat;
+  opacity: 0.12;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
