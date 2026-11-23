@@ -51,6 +51,9 @@
       burger.setAttribute("aria-label", "Fermer le menu de navigation");
     }
     document.body.style.overflow = "hidden";
+    if (closeBtn) {
+      setTimeout(function () { closeBtn.focus(); }, 120);
+    }
   }
 
   function closeDrawer() {
@@ -244,16 +247,63 @@
     }
   });
 
-  /* ── 6. ARIA-CURRENT AUTOMATIQUE ───────────────────────── */
-  var current = location.pathname.split("/").pop() || "index.html";
-  $$(".nav-link, .drawer-nav-link").forEach(function (a) {
-    var href = a.getAttribute("href");
-    if (href && href.split("#")[0] === current) {
-      a.setAttribute("aria-current", "page");
-    }
+  /* ── 6. DÉTECTION PRÉCISE DE LA NAVIGATION ACTIVE ───────── */
+  var currentPath = location.pathname.split("/").pop() || "index.html";
+  if (!currentPath || currentPath === "") { currentPath = "index.html"; }
+
+  var allNavLinks = $$(".nav-link, .drawer-nav-link, nav.main a");
+
+  // Nettoyage de tout attribut aria-current statique pour éviter les faux positifs
+  allNavLinks.forEach(function (a) {
+    a.removeAttribute("aria-current");
   });
 
-  /* ── 7. SCROLL REVEAL ANIMATIONS FLUIDES ────────────────── */
+  // Si on est sur une page interne (ex: projet.html, avancement.html, etc.),
+  // on active le lien correspondant uniquement si le href ne cible pas une ancre.
+  // Sur la page d'accueil (index.html), aucun onglet n'est actif par défaut.
+  if (currentPath !== "index.html") {
+    allNavLinks.forEach(function (a) {
+      var rawHref = a.getAttribute("href") || "";
+      if (rawHref.indexOf("#") !== -1) {
+        return;
+      }
+      var linkPath = rawHref.split("/").pop();
+      if (linkPath === currentPath) {
+        a.setAttribute("aria-current", "page");
+      }
+    });
+  }
+
+  // Gestion dédiée de l'ancre "Nous trouver" (#location-title)
+  // Ne s'active que si l'utilisateur est effectivement devant la section
+  var locationLinks = allNavLinks.filter(function (a) {
+    var href = a.getAttribute("href") || "";
+    return href.indexOf("#location-title") !== -1 || href.indexOf("#location") !== -1;
+  });
+
+  var locTitleEl = $("#location-title");
+  var locationTarget = locTitleEl ? (locTitleEl.closest("section") || locTitleEl) : null;
+
+  if (locationTarget && locationLinks.length && "IntersectionObserver" in window) {
+    var locObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var isVisible = entry.isIntersecting;
+        locationLinks.forEach(function (link) {
+          if (isVisible) {
+            link.setAttribute("aria-current", "location");
+          } else {
+            link.removeAttribute("aria-current");
+          }
+        });
+      });
+    }, {
+      threshold: 0.15,
+      rootMargin: "-15% 0px -35% 0px"
+    });
+    locObserver.observe(locationTarget);
+  }
+
+  /* ── 7. SCROLL REVEAL & STAGGER ANIMATIONS FLUIDES ──────── */
   var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   if (!prefersReducedMotion && "IntersectionObserver" in window) {
@@ -276,6 +326,14 @@
       ".vel-divider",
       ".faq details"
     ];
+
+    // Décalage temporel fluide (stagger) pour les cartes groupées
+    var staggerGroups = $$(".triptych-grid, .bento-grid, .action-grid, .contact-info-list, .space-grid");
+    staggerGroups.forEach(function (group) {
+      Array.from(group.children).forEach(function (child, i) {
+        child.style.transitionDelay = (i * 75) + "ms";
+      });
+    });
 
     var revealElements = $$(revealSelectors.join(", "));
 

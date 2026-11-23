@@ -25,32 +25,87 @@
 
 <header class="site" id="header">
   <div class="wrap bar">
-    <a class="brand" href="index.html" aria-label="Temple Murugan &mdash; Retour a l'accueil">
-      <div class="brand-logo-frame">
-        <img class="brand-logo" src="assets/img/logo-dore-murugan.png" alt="Emblème royal du Temple Murugan Lieusaint" width="66" height="66" loading="eager">
+    <a class="brand" href="index.html" aria-label="Temple Murugan &mdash; Retour à l'accueil">
+      <div class="brand-emblem-wrap">
+        <img class="brand-logo" src="assets/img/logo-dore-murugan.png" alt="Emblème royal du Temple Murugan Lieusaint" width="54" height="54" loading="eager">
       </div>
-      <div class="brand-text">
-        <b>Temple Murugan</b>
+      <div class="brand-identity">
+        <span class="brand-main">Temple Murugan</span>
       </div>
     </a>
-    <nav class="main" id="menu" aria-label="Menu principal">
-      <a href="projet.html" aria-current="page" data-i18n="nav_projet">Le projet</a>
-      <a href="avancement.html" data-i18n="nav_avanc">Avancement</a>
-      <a href="participer.html" data-i18n="nav_part">Participer</a>
-      <a class="nav-link" href="index.html#location-title">Nous trouver</a> <a href="contact.html" data-i18n="nav_contact">Contact</a>
-      <a class="header-join" href="adhesion.html" data-i18n="btn_join">Adhérer</a>
-      <a class="m-only" href="don.html" data-i18n="btn_donate">Faire un don</a>
+    <nav class="main-desktop" aria-label="Menu principal">
+      <a class="nav-link" href="projet.html" data-i18n="nav_projet">Le projet</a>
+      <a class="nav-link" href="avancement.html" data-i18n="nav_avanc">Avancement</a>
+      <a class="nav-link" href="participer.html" data-i18n="nav_part">Participer</a>
+      <a class="nav-link" href="index.html#location-title">Nous trouver</a>
+      <a class="nav-link" href="contact.html" data-i18n="nav_contact">Contact</a>
+      <a class="nav-link header-join" href="adhesion.html" data-i18n="btn_join">Adhérer</a>
     </nav>
-    <div class="actions">
-      <a class="btn btn-or" href="don.html" data-i18n="btn_donate">Faire un don</a>
-      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">
-        <span class="burger-line" aria-hidden="true"></span>
-        <span class="burger-line" aria-hidden="true"></span>
-        <span class="burger-line" aria-hidden="true"></span>
+    <div class="header-actions">
+      <a class="btn btn-gold btn-shine header-cta" href="don.html" data-i18n="btn_donate"><span>Faire un don</span></a>
+      <button class="burger-btn" id="burger" type="button" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Ouvrir le menu de navigation">
+        <span class="burger-bar" aria-hidden="true"></span>
+        <span class="burger-bar" aria-hidden="true"></span>
+        <span class="burger-bar" aria-hidden="true"></span>
       </button>
     </div>
   </div>
 </header>
+<div class="mobile-drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
+<aside class="mobile-drawer" id="mobile-drawer" aria-label="Navigation mobile" aria-hidden="true">
+  <div class="drawer-header">
+    <div class="drawer-brand">
+      <img src="assets/img/logo-dore-murugan.png" alt="" width="44" height="44" aria-hidden="true">
+      <div class="drawer-title-group">
+        <span class="drawer-title">Temple Murugan</span>
+      </div>
+    </div>
+    <button class="drawer-close-btn" type="button" aria-label="Fermer la navigation mobile">✕</button>
+  </div>
+  <ul class="drawer-nav-list">
+    <li>
+      <a class="drawer-nav-link" href="projet.html">
+        <span>Le projet</span>
+        <span class="drawer-nav-number">01</span>
+      </a>
+    </li>
+    <li>
+      <a class="drawer-nav-link" href="avancement.html">
+        <span>Avancement</span>
+        <span class="drawer-nav-number">02</span>
+      </a>
+    </li>
+    <li>
+      <a class="drawer-nav-link" href="participer.html">
+        <span>Participer</span>
+        <span class="drawer-nav-number">03</span>
+      </a>
+    </li>
+    <li>
+      <a class="drawer-nav-link" href="index.html#location-title">
+        <span>Nous trouver</span>
+        <span class="drawer-nav-number">04</span>
+      </a>
+    </li>
+    <li>
+      <a class="drawer-nav-link" href="contact.html">
+        <span>Contact</span>
+        <span class="drawer-nav-number">05</span>
+      </a>
+    </li>
+  </ul>
+  <div class="drawer-actions">
+    <a class="btn btn-gold btn-shine btn-block" href="don.html">
+      <span>Faire un don au projet</span>
+    </a>
+    <a class="btn btn-glass btn-block" href="adhesion.html">
+      <span>Adhérer à l'association</span>
+    </a>
+  </div>
+  <div class="drawer-footer-info">
+    <span>Association Loi 1901 · Lieusaint – Sénart</span>
+  </div>
+</aside>
 
 <main id="contenu">
 

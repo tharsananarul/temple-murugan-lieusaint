@@ -652,7 +652,7 @@ nav.main-desktop {
   color: #FFFFFF;
   background: rgba(255, 255, 255, 0.08);
 }
-.nav-link[aria-current="page"] {
+.nav-link[aria-current] {
   color: #FFFFFF;
   background: rgba(229, 169, 28, 0.15);
   border: 1px solid rgba(255, 203, 85, 0.35);
@@ -684,7 +684,7 @@ nav.main a {
   align-items: center;
 }
 nav.main a:hover,
-nav.main a[aria-current="page"] {
+nav.main a[aria-current] {
   color: #FFFFFF;
   background: rgba(229, 169, 28, 0.15);
 }
@@ -696,7 +696,8 @@ nav.main .m-only {
   font-weight: 700;
 }
 .header-join:hover,
-nav.main a.header-join[aria-current="page"] {
+nav.main a.header-join[aria-current],
+.nav-link.header-join[aria-current] {
   color: #FFF;
   background: rgba(229, 169, 28, 0.15);
 }
@@ -888,14 +889,22 @@ nav.main a.header-join[aria-current="page"] {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: #FFFFFF;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
+  transition: background 200ms var(--ease), border-color 200ms var(--ease), transform 200ms var(--ease);
+}
+.drawer-close-btn:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: var(--or-400);
+  transform: rotate(90deg);
 }
 
 .drawer-nav-list {
@@ -925,7 +934,7 @@ nav.main a.header-join[aria-current="page"] {
   color: var(--or-300);
   border-color: rgba(255, 203, 85, 0.2);
 }
-.drawer-nav-link[aria-current="page"] {
+.drawer-nav-link[aria-current] {
   background: rgba(229, 169, 28, 0.15);
   border-color: var(--or-500);
   color: #FFFFFF;
@@ -2577,6 +2586,94 @@ footer.site a:hover {
 .contact-form .check input { margin-block-start: 4px; accent-color: var(--rouge-700); }
 .contact-form .btn { width: 100%; min-height: 52px; }
 
+.contact-form fieldset {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.5);
+}
+.contact-form fieldset legend {
+  font-size: var(--fs-xs);
+  font-weight: 800;
+  color: var(--sable-800);
+  padding-inline: 6px;
+  margin-block-end: 8px;
+}
+.contact-form .chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.contact-form .chips input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.contact-form .chips label {
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--pill);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--sable-800);
+  background: #FFF;
+  cursor: pointer;
+  transition: all 180ms var(--ease);
+  user-select: none;
+}
+.contact-form .chips label:hover {
+  border-color: var(--or-400);
+  background: var(--sable-50);
+}
+.contact-form .chips input:checked + label {
+  color: #FFF;
+  background: var(--rouge-700);
+  border-color: var(--rouge-700);
+  box-shadow: 0 2px 8px rgba(115, 26, 29, 0.25);
+}
+.contact-form .chips input:focus-visible + label {
+  outline: 2px solid var(--or-400);
+  outline-offset: 2px;
+}
+.contact-form .opt {
+  font-size: var(--fs-2xs);
+  font-weight: 400;
+  color: var(--text-2);
+}
+.err {
+  display: block;
+  font-size: var(--fs-2xs);
+  color: #C02B2B;
+  min-height: 1.2em;
+  margin-block-start: 4px;
+  font-weight: 500;
+}
+.contact-form [aria-invalid="true"] {
+  border-color: #C02B2B !important;
+  box-shadow: 0 0 0 3px rgba(192, 43, 43, 0.15) !important;
+}
+.ok, .fail {
+  display: none;
+  margin-block-start: 1.5rem;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+}
+.ok.show {
+  display: block;
+  background: rgba(46, 125, 50, 0.1);
+  border: 1px solid rgba(46, 125, 50, 0.35);
+  color: #1b5e20;
+}
+.fail.show {
+  display: block;
+  background: rgba(198, 40, 40, 0.1);
+  border: 1px solid rgba(198, 40, 40, 0.35);
+  color: #b71c1c;
+}
+
 /* ============================================================
    16. SCROLL REVEAL & MICRO-ANIMATIONS GPU
    ============================================================ */
@@ -3785,8 +3882,8 @@ header.site::after {
   opacity: 0.9;
 }
 
-header.site .nav-link[aria-current="page"],
-header.site nav.main a[aria-current="page"] {
+header.site .nav-link[aria-current],
+header.site nav.main a[aria-current] {
   color: #fffaf1;
   background: rgba(154, 64, 52, 0.78);
   border-color: rgba(255, 223, 136, 0.45);

@@ -18,7 +18,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="legacy-page adhesion-page">
+<body class="adhesion-page">
 <a class="skip" href="#contenu" data-i18n="skip">Aller au contenu</a>
 <div class="note" data-i18n="banner">Site en préparation : le projet est actuellement en phase de conception.</div>
 <header class="site" id="header">
@@ -39,6 +39,7 @@
       <a class="nav-link header-join" href="adhesion.html" data-i18n="btn_join">Adhérer</a>
     </nav>
     <div class="header-actions">
+      <a class="btn btn-gold btn-shine header-cta" href="don.html" data-i18n="btn_donate"><span>Faire un don</span></a>
       <button class="burger-btn" id="burger" type="button" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Ouvrir le menu de navigation">
         <span class="burger-bar" aria-hidden="true"></span><span class="burger-bar" aria-hidden="true"></span><span class="burger-bar" aria-hidden="true"></span>
       </button>
@@ -55,8 +56,8 @@
     <li><a class="drawer-nav-link" href="projet.html"><span>Le projet</span><span class="drawer-nav-number">01</span></a></li>
     <li><a class="drawer-nav-link" href="avancement.html"><span>Avancement</span><span class="drawer-nav-number">02</span></a></li>
     <li><a class="drawer-nav-link" href="participer.html"><span>Participer</span><span class="drawer-nav-number">03</span></a></li>
-    <li><a class="drawer-nav-link" href="index.html#location-title"><span>Nous trouver</span><span class="drawer-nav-number">05</span></a></li>
-    <li><a class="drawer-nav-link" href="contact.html"><span>Contact</span><span class="drawer-nav-number">04</span></a></li>
+    <li><a class="drawer-nav-link" href="index.html#location-title"><span>Nous trouver</span><span class="drawer-nav-number">04</span></a></li>
+    <li><a class="drawer-nav-link" href="contact.html"><span>Contact</span><span class="drawer-nav-number">05</span></a></li>
   </ul>
   <div class="drawer-actions">
     <a class="btn btn-gold btn-shine btn-block" href="don.html"><span>Faire un don au projet</span></a>
@@ -64,31 +65,53 @@
   </div>
   <div class="drawer-footer-info"><span>Association Loi 1901 · Lieusaint – Sénart</span></div>
 </aside>
-<main id="contenu" class="legacy-main">
-<div class="page-head contact-hero"><div class="wrap contact-hero-inner">
-  <h1 data-i18n="hd_adh_t">Rejoindre l'association</h1>
-  <p data-i18n="hd_adh_d">Dites-nous qui vous êtes : nous vous tiendrons informé de l'avancement du projet et des événements.</p>
-</div></div>
-<section class="block">
-  <div class="wrap two">
-    <div class="side">
-      <span class="space-icon" aria-hidden="true">✦</span>
-      <h2 class="title">Pourquoi ces informations ?</h2>
-      <p>Nous demandons seulement ce dont l'association a besoin pour vous contacter et gérer votre adhésion.</p>
-      <ul>
-        <li>Prénom, nom, e-mail, ville : pour vous identifier et vous écrire.</li>
-        <li>Téléphone, langue, message : facultatifs.</li>
-        <li>Vous pouvez demander la suppression de vos données à tout moment.</li>
-      </ul>
-      <p><a href="confidentialite.html">Politique de confidentialité</a></p>
-    </div>
+<main id="contenu">
+<section class="contact-hero">
+  <div class="wrap contact-hero-inner">
     <div>
-      <form class="grid" data-form="adhesion" novalidate>
+      <p class="contact-eyebrow">Engagement citoyen · Lieusaint</p>
+      <h1 data-i18n="hd_adh_t">Rejoindre l'association</h1>
+      <p class="contact-lead" data-i18n="hd_adh_d">Dites-nous qui vous êtes : nous vous tiendrons informé de l'avancement du projet et des événements.</p>
+    </div>
+  </div>
+</section>
+<section class="contact-section">
+  <div class="wrap contact-layout">
+    <aside class="contact-aside">
+      <div class="contact-aside-card">
+        <span class="contact-icon" aria-hidden="true">✦</span>
+        <p class="contact-eyebrow">Pourquoi ces informations ?</p>
+        <h2>Transparence & respect</h2>
+        <p>Nous demandons seulement ce dont l'association a besoin pour vous contacter et gérer votre adhésion.</p>
+        <a class="contact-mail" href="confidentialite.html">Politique de confidentialité →</a>
+      </div>
+      <div class="contact-info-list">
+        <div class="contact-info-item">
+          <span aria-hidden="true">✓</span>
+          <div><strong>Coordonnées essentielles</strong><small>Prénom, nom, e-mail et ville pour vous identifier et vous écrire</small></div>
+        </div>
+        <div class="contact-info-item">
+          <span aria-hidden="true">◌</span>
+          <div><strong>Informations facultatives</strong><small>Téléphone, langue préférée et disponibilités selon vos souhaits</small></div>
+        </div>
+        <div class="contact-info-item">
+          <span aria-hidden="true">🔒</span>
+          <div><strong>Vos données protégées</strong><small>Demandez la suppression de vos données à tout moment</small></div>
+        </div>
+      </div>
+    </aside>
+    <div class="contact-form-card">
+      <div class="contact-form-heading">
+        <p class="contact-eyebrow">Votre engagement</p>
+        <h2>Formulaire d'adhésion</h2>
+        <p>Remplissez les informations ci-dessous pour devenir membre ou bénévole.</p>
+      </div>
+      <form class="grid contact-form" data-form="adhesion" novalidate>
         <input type="hidden" name="_subject" value="Nouvelle demande d'adhésion">
-        <div class="field"><label class="l" for="prenom" data-i18n="f_prenom">Prénom</label><input type="text" id="prenom" name="prenom" autocomplete="given-name" required><span class="err" id="e-prenom"></span></div>
-        <div class="field"><label class="l" for="nom" data-i18n="f_nom">Nom</label><input type="text" id="nom" name="nom" autocomplete="family-name" required><span class="err" id="e-nom"></span></div>
-        <div class="field"><label class="l" for="mail" data-i18n="f_mail">Adresse e-mail</label><input type="email" id="mail" name="email" autocomplete="email" required><span class="err" id="e-mail"></span></div>
-        <div class="field"><label class="l" for="ville" data-i18n="f_ville">Ville</label><input type="text" id="ville" name="ville" autocomplete="address-level2" required><span class="err" id="e-ville"></span></div>
+        <div class="field"><label class="l" for="prenom"><span data-i18n="f_prenom">Prénom</span></label><input type="text" id="prenom" name="prenom" autocomplete="given-name" required><span class="err" id="e-prenom"></span></div>
+        <div class="field"><label class="l" for="nom"><span data-i18n="f_nom">Nom</span></label><input type="text" id="nom" name="nom" autocomplete="family-name" required><span class="err" id="e-nom"></span></div>
+        <div class="field"><label class="l" for="mail"><span data-i18n="f_mail">Adresse e-mail</span></label><input type="email" id="mail" name="email" autocomplete="email" required><span class="err" id="e-mail"></span></div>
+        <div class="field"><label class="l" for="ville"><span data-i18n="f_ville">Ville</span></label><input type="text" id="ville" name="ville" autocomplete="address-level2" required><span class="err" id="e-ville"></span></div>
         <fieldset class="field full"><legend data-i18n="f_type">Comment souhaitez-vous participer ?</legend>
           <div class="chips">
             <input type="radio" name="participation" id="t1" value="membre" checked><label for="t1" data-i18n="t_member">Membre</label>
@@ -99,13 +122,13 @@
         <div class="field"><label class="l" for="tel"><span data-i18n="f_tel">Téléphone</span> <span class="opt" data-i18n="opt">(facultatif)</span></label><input type="tel" id="tel" name="telephone" autocomplete="tel"></div>
         <div class="field"><label class="l" for="lg"><span data-i18n="f_lang">Langue préférée</span> <span class="opt" data-i18n="opt">(facultatif)</span></label>
           <select id="lg" name="langue"><option>Français</option><option>English</option></select></div>
-        <div class="field full"><label class="l" for="msg"><span>Compétences ou disponibilités</span> <span class="opt" data-i18n="opt">(facultatif)</span></label><textarea id="msg" name="message"></textarea></div>
+        <div class="field full"><label class="l" for="msg"><span>Compétences ou disponibilités</span> <span class="opt" data-i18n="opt">(facultatif)</span></label><textarea id="msg" name="message" placeholder="Vos disponibilités, compétences utiles ou centres d'intérêt..."></textarea></div>
         <div class="field full">
           <label class="check"><input type="checkbox" id="rgpd" name="consentement" required><span data-i18n="consent">J'accepte que l'association conserve ces informations pour me contacter au sujet du projet. Je peux demander leur suppression à tout moment.</span></label>
           <span class="err" id="e-rgpd"></span>
         </div>
         <div class="field full"><label class="check"><input type="checkbox" name="newsletter" value="oui"><span data-i18n="news_opt">Je souhaite recevoir les actualités du projet par e-mail.</span></label></div>
-        <div class="field full"><button class="btn btn-red" type="submit" data-i18n="adh_btn">Envoyer ma demande</button></div>
+        <div class="field full"><button class="btn btn-red btn-block" type="submit" data-i18n="adh_btn">Envoyer ma demande</button></div>
       </form>
       <div class="ok" role="status"><span data-i18n="adh_ok">Merci ! Votre demande est enregistrée. Nous reviendrons vers vous par e-mail.</span>
         <p class="demo" hidden></p>
